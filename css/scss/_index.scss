@@ -1,0 +1,6 @@
+main{
+    background-color: $blue-bg;
+    & .landing{
+        height: clamp(720px,100svh,1080px);
+    }
+}

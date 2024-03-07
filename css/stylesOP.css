@@ -1,0 +1,12 @@
+main {
+  background-color: #031117;
+}
+
+main {
+  background-color: #031117;
+}
+main .landing {
+  height: clamp(720px, 100svh, 1080px);
+}
+
+/*# sourceMappingURL=stylesOP.css.map */
