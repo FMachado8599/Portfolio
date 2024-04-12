@@ -1,3 +1,7 @@
+.heading1 {
+  font-size: 5rem;
+}
+
 main {
   background-color: #031117;
 }
@@ -7,6 +11,74 @@ main {
 }
 main .landing {
   height: clamp(720px, 100svh, 1080px);
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .landing .imagenPerfil {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 50%;
+  padding-right: 1rem;
+}
+main .landing .imagenPerfil::after {
+  margin-left: 5px;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 800px;
+  background-color: #0d6efd;
+}
+main .landing .imagenPerfil .filtroAzul {
+  content: "";
+  position: absolute;
+  height: 1000px;
+  width: 1000px;
+  background-color: #0d6efd;
+  z-index: -1;
+}
+main .landing .imagenPerfil img {
+  position: absolute;
+  aspect-ratio: 2/5;
+  height: 100%;
+  width: 500px;
+  object-fit: contain;
+  -webkit-mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
+  mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
+}
+main .landing .imagenPerfil .fadedImg {
+  z-index: 0;
+  opacity: 50%;
+  mix-blend-mode: luminosity;
+}
+main .landing .imagenPerfil .imagenSuperior {
+  z-index: 1;
+}
+main .landing .textoIntro {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 1rem;
+  text-align: left;
+}
+main .landing .textoIntro h1 {
+  color: aliceblue;
+  font-size: clamp(24px, 4rem, 60px);
+  padding-bottom: 1rem;
+}
+main .landing .textoIntro h1 span {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(32px, 4.5rem, 80px);
+  line-height: 70%;
+}
+main .landing .textoIntro h2 {
+  color: #0d6efd;
 }
 
 /*# sourceMappingURL=stylesOP.css.map */

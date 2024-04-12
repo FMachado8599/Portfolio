@@ -2,5 +2,74 @@ main{
     background-color: $blue-bg;
     & .landing{
         height: clamp(720px,100svh,1080px);
+        margin-top: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & .imagenPerfil{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 50%;
+            padding-right: 1rem;
+            &::after{
+                margin-left: 5px;
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 800px;
+                background-color: #0d6efd;
+            }
+            & .filtroAzul{
+                content: "";
+                position: absolute;
+                height: 1000px;
+                width: 1000px;
+                background-color: #0d6efd;
+                z-index: -1;
+            }
+            & img{
+                position: absolute;
+                aspect-ratio: 2/5;
+                height: 100%;
+                width: 500px;
+                object-fit: contain;
+                -webkit-mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
+                mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
+            }
+            & .fadedImg{
+                z-index: 0;
+                opacity: 50%;
+                mix-blend-mode: luminosity;
+            }
+            & .imagenSuperior{
+                z-index: 1;
+            }
+        }
+        & .textoIntro{
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+            width: 50%;
+            padding-left: 1rem;
+            text-align: left;
+            & h1{
+                color: aliceblue;
+                font-size: clamp(24px,4rem,60px);
+                padding-bottom: 1rem;
+                & span{
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: clamp(32px,4.5rem,80px);
+                    line-height: 70%;
+                }
+            }
+            & h2{
+                color: #0d6efd;
+            }
+        }
+        
     }
 }
