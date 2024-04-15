@@ -18,14 +18,14 @@ main{
                 position: absolute;
                 width: 3px;
                 height: 800px;
-                background-color: #0d6efd;
+                background-color: $blue-600;
             }
             & .filtroAzul{
                 content: "";
                 position: absolute;
                 height: 1000px;
                 width: 1000px;
-                background-color: #0d6efd;
+                background-color: $blue-600;
                 z-index: -1;
             }
             & img{
@@ -44,6 +44,7 @@ main{
             }
             & .imagenSuperior{
                 z-index: 1;
+                height: 100%;
             }
         }
         & .textoIntro{
@@ -54,6 +55,7 @@ main{
             width: 50%;
             padding-left: 1rem;
             text-align: left;
+            overflow: hidden;
             & h1{
                 color: aliceblue;
                 font-size: clamp(24px,4rem,60px);
@@ -67,7 +69,9 @@ main{
                 }
             }
             & h2{
-                color: #0d6efd;
+                color: $blue-600;
+                font-weight: 700;
+                font-size: clamp(24px,3rem,40px);
             }
         }
         

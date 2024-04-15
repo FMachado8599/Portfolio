@@ -2,8 +2,40 @@
   font-size: 5rem;
 }
 
-main {
+body {
   background-color: #031117;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.titulosSeccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(24px, 3rem, 40px);
+  font-weight: 700;
+  color: #F5F5F5;
+}
+.titulosSeccion::after {
+  content: "";
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 2px;
+  background-color: #028ac7;
+  margin-top: 1rem;
+}
+
+.botonHamburguesa {
+  border: none;
+}
+
+.barraNav {
+  background-color: rgba(12, 74, 110, 0.3137254902);
+  backdrop-filter: blur(10px);
 }
 
 main {
@@ -29,14 +61,14 @@ main .landing .imagenPerfil::after {
   position: absolute;
   width: 3px;
   height: 800px;
-  background-color: #0d6efd;
+  background-color: #028ac7;
 }
 main .landing .imagenPerfil .filtroAzul {
   content: "";
   position: absolute;
   height: 1000px;
   width: 1000px;
-  background-color: #0d6efd;
+  background-color: #028ac7;
   z-index: -1;
 }
 main .landing .imagenPerfil img {
@@ -55,6 +87,7 @@ main .landing .imagenPerfil .fadedImg {
 }
 main .landing .imagenPerfil .imagenSuperior {
   z-index: 1;
+  height: 100%;
 }
 main .landing .textoIntro {
   display: flex;
@@ -64,6 +97,7 @@ main .landing .textoIntro {
   width: 50%;
   padding-left: 1rem;
   text-align: left;
+  overflow: hidden;
 }
 main .landing .textoIntro h1 {
   color: aliceblue;
@@ -78,7 +112,9 @@ main .landing .textoIntro h1 span {
   line-height: 70%;
 }
 main .landing .textoIntro h2 {
-  color: #0d6efd;
+  color: #028ac7;
+  font-weight: 700;
+  font-size: clamp(24px, 3rem, 40px);
 }
 
 /*# sourceMappingURL=stylesOP.css.map */
