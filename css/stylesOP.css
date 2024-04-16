@@ -34,42 +34,44 @@ body {
 }
 
 .barraNav {
-  background-color: rgba(12, 74, 110, 0.3137254902);
-  backdrop-filter: blur(10px);
+  background-color: rgba(12, 74, 110, 0.4392156863);
+  backdrop-filter: blur(5px);
 }
 
 main {
   background-color: #031117;
 }
 main .landing {
-  height: clamp(720px, 100svh, 1080px);
+  height: clamp(720px, 100svh, 1024px);
   margin-top: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+main .landing .imgFondo {
+  position: absolute;
+  opacity: 0.2;
+  z-index: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
 }
 main .landing .imagenPerfil {
   display: flex;
   justify-content: end;
   align-items: center;
   width: 50%;
-  padding-right: 1rem;
 }
 main .landing .imagenPerfil::after {
-  margin-left: 5px;
   content: "";
   position: absolute;
-  width: 3px;
+  width: 5px;
   height: 800px;
   background-color: #028ac7;
-}
-main .landing .imagenPerfil .filtroAzul {
-  content: "";
-  position: absolute;
-  height: 1000px;
-  width: 1000px;
-  background-color: #028ac7;
-  z-index: -1;
+  opacity: 1;
+  z-index: 10;
 }
 main .landing .imagenPerfil img {
   position: absolute;
@@ -81,23 +83,26 @@ main .landing .imagenPerfil img {
   mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
 }
 main .landing .imagenPerfil .fadedImg {
-  z-index: 0;
-  opacity: 50%;
-  mix-blend-mode: luminosity;
+  z-index: 4;
+  filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(150deg);
 }
 main .landing .imagenPerfil .imagenSuperior {
-  z-index: 1;
+  z-index: 5;
   height: 100%;
 }
 main .landing .textoIntro {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   flex-direction: column;
   width: 50%;
-  padding-left: 1rem;
+  padding-left: 2rem;
   text-align: left;
   overflow: hidden;
+  z-index: 5;
+  backdrop-filter: blur(3px);
+  height: 75%;
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
 }
 main .landing .textoIntro h1 {
   color: aliceblue;
@@ -115,6 +120,26 @@ main .landing .textoIntro h2 {
   color: #028ac7;
   font-weight: 700;
   font-size: clamp(24px, 3rem, 40px);
+}
+main .aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .aboutMe .infoPersonal {
+  width: 80%;
+  height: auto;
+  background-color: #0370a1;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  mask: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+}
+main .aboutMe .infoPersonal .imgAboutMe {
+  max-height: 70svh;
 }
 
 /*# sourceMappingURL=stylesOP.css.map */
