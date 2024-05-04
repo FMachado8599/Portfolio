@@ -10,14 +10,17 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
     <link rel="stylesheet" href="./css/stylesOP.css" />
     <title>Facundo Machado</title>
   </head>
   <body>
     <header>
-      <nav class="barraNav navbar navbar-dark bg-sky-900 fixed-top">
+      <nav
+        class="barraNav navbar navbar-expand-lg navbar-dark bg-sky-900 fixed-top"
+      >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Facundo Machado</a>
+          <a class="navbar-brand text-uppercase fw-bold" href="#">welcome</a>
           <button
             class="navbar-toggler botonHamburguesa"
             type="button"
@@ -53,7 +56,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Galeria</a>
+                  <a class="nav-link" href="#">Galery</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact</a>
@@ -89,24 +92,45 @@
           <h2>Developer/Designer</h2>
         </div>
       </section>
-      <section class="aboutMe">
+      <section
+        class="aboutMe container d-flex justify-content-center align-items-center flex-column"
+      >
+        <img
+          class="imgFondoAboutMe"
+          src="./media/1x/Codigo_1080px.svg"
+          alt="foto fondo about me"
+        />
         <h2 class="titulosSeccion">About Me</h2>
-        <div class="infoPersonal">
+        <div class="infoPersonal mx-5 my-5 px-0">
           <img
-            class="imgAboutMe"
+            class="imgAboutMe md-6 shadow"
             src="./media/facu.webp"
             alt="Foto de Facundo"
           />
-          <div class="textInfoPersonal">
-            <h2>Who am I?</h2>
-            <p><span>Born</span> 8 may 1999</p>
-            <p><span>From</span> Montevideo, Uruguay</p>
-            <p>
-              Perseverant and stoic designer and developer, adept at making
-              decisions under pressure. Quick learner, versatile, and
-              empathetic. Creative focus on quality and detail, while
-              maintaining efficiency."
-            </p>
+          <div class="infoGroup">
+            <div class="textInfoPersonal md-6">
+              <h2 class="iTitle">Who am I?</h2>
+              <div>
+                <p><span>Born:</span> 8 may 1999</p>
+                <p><span>From:</span> Montevideo, Uruguay</p>
+              </div>
+              <p>
+                Perseverant and stoic designer and developer, adept at making
+                decisions under pressure. Quick learner, versatile, and
+                empathetic. Creative focus on quality and detail, while
+                maintaining efficiency
+              </p>
+            </div>
+            <div class="skills">
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+              <div class=""></div>
+            </div>
           </div>
         </div>
       </section>

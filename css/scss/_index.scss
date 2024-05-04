@@ -1,7 +1,8 @@
+@import '_aboutMe';
 main{
     background-color: $blue-bg;
     & .landing{
-        height: clamp(720px,100svh,1024px);
+        height: 100svh;
         margin-top: 55px;
         display: flex;
         justify-content: center;
@@ -17,7 +18,7 @@ main{
             mask: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 90%,
+    rgba(0, 0, 0, 1) 80%,
     rgba(0, 0, 0, 0) 100%);
         }
         & .imagenPerfil{
@@ -30,6 +31,7 @@ main{
                 position: absolute;
                 width: 5px;
                 height: 800px;
+                max-height: 70%;
                 background-color: $blue-600;
                 opacity: 1;
                 z-index: 10;
@@ -89,30 +91,5 @@ main{
             }
         }
         
-    }
-    & .aboutMe{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        & .infoPersonal{
-            width: 80%;
-            height: auto;
-            background-color: $blue-700;
-            backdrop-filter: blur(7px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            mask: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0) 0%,
-                rgba(0, 0, 0, 1) 25%,
-                rgba(0, 0, 0, 1) 75%,
-                rgba(0, 0, 0, 0) 100%);
-            & .imgAboutMe{
-                max-height: 70svh;
-            }
-        }
     }
 }

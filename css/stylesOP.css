@@ -2,11 +2,14 @@
   font-size: 5rem;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   background-color: #031117;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .titulosSeccion {
@@ -38,11 +41,86 @@ body {
   backdrop-filter: blur(5px);
 }
 
+.aboutMe {
+  overflow: hidden;
+}
+.aboutMe .imgFondoAboutMe {
+  position: absolute;
+  opacity: 0.4;
+  height: 80%;
+  width: 100%;
+  -webkit-mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
+  mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
+}
+.aboutMe .infoPersonal {
+  height: auto;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: 900px;
+  overflow: visible;
+  gap: 1rem;
+  position: relative;
+}
+.aboutMe .infoPersonal .imgAboutMe {
+  margin: 0;
+  max-height: 500px;
+  border-radius: 2rem;
+  z-index: 1;
+}
+.aboutMe .infoPersonal .infoGroup {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.aboutMe .infoPersonal .infoGroup .textInfoPersonal {
+  background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.3137254902) 100%);
+  backdrop-filter: blur(3px);
+  padding: 1.5rem;
+  color: #F5F5F5;
+  gap: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
+}
+.aboutMe .infoPersonal .infoGroup .textInfoPersonal .iTitle {
+  font-size: 2rem;
+  filter: drop-shadow(2px 0px 0.15rem black);
+}
+.aboutMe .infoPersonal .infoGroup .textInfoPersonal div {
+  margin-bottom: 1rem;
+}
+.aboutMe .infoPersonal .infoGroup .textInfoPersonal div p {
+  margin: 0.2rem;
+  gap: 0;
+  line-height: 1rem;
+}
+.aboutMe .infoPersonal .infoGroup .textInfoPersonal div p span {
+  font-weight: 600;
+}
+.aboutMe .infoPersonal .infoGroup .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
+}
+.aboutMe .infoPersonal .infoGroup .skills div {
+  border-radius: 0.75rem;
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+}
+
 main {
   background-color: #031117;
 }
 main .landing {
-  height: clamp(720px, 100svh, 1024px);
+  height: 100svh;
   margin-top: 55px;
   display: flex;
   justify-content: center;
@@ -56,7 +134,7 @@ main .landing .imgFondo {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
 }
 main .landing .imagenPerfil {
   display: flex;
@@ -69,6 +147,7 @@ main .landing .imagenPerfil::after {
   position: absolute;
   width: 5px;
   height: 800px;
+  max-height: 70%;
   background-color: #028ac7;
   opacity: 1;
   z-index: 10;
@@ -120,26 +199,6 @@ main .landing .textoIntro h2 {
   color: #028ac7;
   font-weight: 700;
   font-size: clamp(24px, 3rem, 40px);
-}
-main .aboutMe {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-main .aboutMe .infoPersonal {
-  width: 80%;
-  height: auto;
-  background-color: #0370a1;
-  backdrop-filter: blur(7px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  mask: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
-}
-main .aboutMe .infoPersonal .imgAboutMe {
-  max-height: 70svh;
 }
 
 /*# sourceMappingURL=stylesOP.css.map */

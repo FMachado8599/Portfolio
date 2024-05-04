@@ -1,8 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background-color: $blue-bg;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 .titulosSeccion{
     display: flex;

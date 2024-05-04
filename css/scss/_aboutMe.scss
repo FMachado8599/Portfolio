@@ -1,0 +1,75 @@
+.aboutMe{
+    overflow: hidden;
+    & .imgFondoAboutMe{
+        position:absolute;
+        opacity: 0.4;
+        height: 80%;
+        width: 100%;
+        -webkit-mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
+        mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
+    }
+    & .infoPersonal{
+        height: auto;
+        max-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        max-width: 900px;
+        overflow: visible;
+        gap: 1rem;
+        position: relative;
+        & .imgAboutMe{
+            margin: 0;
+            max-height: 500px;
+            border-radius: 2rem;
+            z-index: 1;
+        }
+        & .infoGroup{
+            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            & .textInfoPersonal{
+                background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70050 100%);
+                backdrop-filter: blur(3px);
+                padding: 1.5rem;
+                color: $white;
+                gap: 1rem;
+                border-radius: 2rem;
+                box-shadow: 0 0.5rem 2rem rgba($blue-100, .1 );
+                & .iTitle{
+                    font-size: 2rem;
+                    filter: drop-shadow(2px 0px 0.15rem black);
+                }
+                & div{
+                    margin-bottom: 1rem;
+                    & p{
+                        margin: 0.2rem;
+                        gap: 0;
+                        line-height: 1rem;
+                        span{
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            & .skills{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                border-radius: 2rem;
+                padding: 1.5rem;
+                background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70030 100%);
+                backdrop-filter: blur(3px);
+                box-shadow: 0 0.5rem 2rem rgba($blue-100, .1 );
+                & div{
+                    border-radius: 0.75rem;
+                    height: 50px;
+                    width: 50px;
+                    background-color: aqua;
+                }
+                
+            }
+        }
+    }
+}
