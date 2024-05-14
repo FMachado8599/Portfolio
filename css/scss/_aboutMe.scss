@@ -1,7 +1,8 @@
 .aboutMe{
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
     & .imgFondoAboutMe{
-        position:absolute;
+        position: absolute;
         opacity: 0.4;
         height: 80%;
         width: 100%;
@@ -10,18 +11,20 @@
     }
     & .infoPersonal{
         height: auto;
-        max-height: 500px;
+        max-height: 600px;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
+        flex-wrap: wrap;
         max-width: 900px;
         overflow: visible;
         gap: 1rem;
         position: relative;
+        margin: 0;
         & .imgAboutMe{
             margin: 0;
-            max-height: 500px;
+            max-height: inherit;
             border-radius: 2rem;
             z-index: 1;
         }
@@ -29,6 +32,11 @@
             gap: 1rem;
             display: flex;
             flex-direction: column;
+            width: 60%;
+            height: 100%;
+            max-height: inherit;
+            overflow: hidden;
+            background: none;
             & .textInfoPersonal{
                 background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70050 100%);
                 backdrop-filter: blur(3px);
@@ -55,6 +63,7 @@
             }
             & .skills{
                 display: flex;
+                flex-direction: column;
                 flex-wrap: wrap;
                 gap: 10px;
                 border-radius: 2rem;
@@ -62,11 +71,26 @@
                 background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70030 100%);
                 backdrop-filter: blur(3px);
                 box-shadow: 0 0.5rem 2rem rgba($blue-100, .1 );
+                & h3{
+                    color:$white;
+                }
+                & .programmingSkills, .designingSkills{
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    padding: 0;
+                    margin: 0;
+                    & li{
+                        border-radius: 0.75rem;
+                        height: 50px;
+                        width: 50px;
+                        background-color: aqua;
+                    }
+                }
                 & div{
-                    border-radius: 0.75rem;
-                    height: 50px;
-                    width: 50px;
-                    background-color: aqua;
+
                 }
                 
             }

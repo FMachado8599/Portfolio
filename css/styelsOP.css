@@ -43,7 +43,6 @@ body {
 
 .aboutMe {
   overflow: visible;
-  position: relative;
 }
 .aboutMe .imgFondoAboutMe {
   position: absolute;
@@ -55,21 +54,20 @@ body {
 }
 .aboutMe .infoPersonal {
   height: auto;
-  max-height: 600px;
+  max-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   max-width: 900px;
   overflow: visible;
   gap: 1rem;
   position: relative;
-  margin: 0;
 }
 .aboutMe .infoPersonal .imgAboutMe {
   margin: 0;
-  max-height: inherit;
+  max-height: 500px;
   border-radius: 2rem;
   z-index: 1;
 }
@@ -77,11 +75,6 @@ body {
   gap: 1rem;
   display: flex;
   flex-direction: column;
-  width: 60%;
-  height: 100%;
-  max-height: inherit;
-  overflow: hidden;
-  background: none;
 }
 .aboutMe .infoPersonal .infoGroup .textInfoPersonal {
   background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.3137254902) 100%);
@@ -105,37 +98,35 @@ body {
   line-height: 1rem;
 }
 .aboutMe .infoPersonal .infoGroup .textInfoPersonal div p span {
-  font-weight: 600;
+  font-weight: 700;
 }
 .aboutMe .infoPersonal .infoGroup .skills {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
   border-radius: 2rem;
   padding: 1.5rem;
   background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
   backdrop-filter: blur(3px);
   box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
-}
-.aboutMe .infoPersonal .infoGroup .skills h3 {
-  color: #F5F5F5;
+  overflow: visible;
 }
 .aboutMe .infoPersonal .infoGroup .skills .programmingSkills, .aboutMe .infoPersonal .infoGroup .skills .designingSkills {
-  max-width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10px;
-  padding: 0;
-  margin: 0;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 50%;
 }
-.aboutMe .infoPersonal .infoGroup .skills .programmingSkills li, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li {
+.aboutMe .infoPersonal .infoGroup .skills ul li {
+  gap: 10px;
   border-radius: 0.75rem;
   height: 50px;
   width: 50px;
-  background-color: aqua;
+  background-color: red;
 }
+
 main .landing {
   height: 100svh;
   margin-top: 55px;
@@ -220,4 +211,4 @@ main .landing .textoIntro h2 {
   font-size: clamp(24px, 3rem, 40px);
 }
 
-/*# sourceMappingURL=stylesOP.css.map */
+/*# sourceMappingURL=styelsOP.css.map */

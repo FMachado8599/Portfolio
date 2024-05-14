@@ -1,12 +1,12 @@
 @import '_aboutMe';
 main{
-    background-color: $blue-bg;
     & .landing{
         height: 100svh;
         margin-top: 55px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         & .imgFondo{
             position: absolute;
             opacity: 0.2;
@@ -26,6 +26,7 @@ main{
             justify-content: end;
             align-items: center;
             width: 50%;
+            overflow: visible;
             &::after{
                 content: "";
                 position: absolute;
@@ -40,7 +41,7 @@ main{
                 position: absolute;
                 aspect-ratio: 2/5;
                 height: 100%;
-                width: 500px;
+                width: clamp(100px,100%,500px);
                 object-fit: contain;
                 -webkit-mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
                 mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
