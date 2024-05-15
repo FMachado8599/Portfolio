@@ -2,6 +2,7 @@
     border: none;
 }
 .barraNav{
-    background-color: #0c4a6e70;
+    background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70050 100%);
+    border-bottom: 1px $white-300 solid;
     backdrop-filter: blur(5px);
 }

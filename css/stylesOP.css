@@ -37,7 +37,8 @@ body {
 }
 
 .barraNav {
-  background-color: rgba(12, 74, 110, 0.4392156863);
+  background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.3137254902) 100%);
+  border-bottom: 1px rgba(245, 245, 245, 0.1882352941) solid;
   backdrop-filter: blur(5px);
 }
 
@@ -51,7 +52,7 @@ body {
   height: 80%;
   width: 100%;
   -webkit-mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
-  mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
+  mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 80%);
 }
 .aboutMe .infoPersonal {
   height: auto;
@@ -80,7 +81,7 @@ body {
   width: 60%;
   height: 100%;
   max-height: inherit;
-  overflow: hidden;
+  overflow: visible;
   background: none;
 }
 .aboutMe .infoPersonal .infoGroup .textInfoPersonal {
@@ -134,8 +135,62 @@ body {
   border-radius: 0.75rem;
   height: 50px;
   width: 50px;
-  background-color: aqua;
+  background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 1px 10px rgba(224, 245, 254, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F5F5F5;
 }
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contactContainer {
+  justify-content: space-around;
+  gap: 5rem;
+  max-width: 800px;
+  padding: 5rem 0px;
+}
+.contact .contactContainer .contactInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 10px;
+}
+.contact .contactContainer .contactInfo p {
+  color: #F5F5F5;
+  font-weight: 600;
+}
+.contact .contactContainer .contactInfo p span {
+  display: block;
+  font-weight: 200;
+}
+.contact .contactContainer .contactInfo .cellphone {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.contact .contactContainer .contactForm {
+  width: 400px;
+  background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.3137254902) 100%);
+  backdrop-filter: blur(3px);
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
+}
+.contact .contactContainer .contactForm div label {
+  color: #F5F5F5;
+}
+.contact .contactContainer .contactForm div label textarea {
+  resize: vertical;
+  width: 90%;
+}
+
 main .landing {
   height: 100svh;
   margin-top: 55px;
@@ -212,7 +267,7 @@ main .landing .textoIntro h1 span {
   text-transform: uppercase;
   font-weight: 700;
   font-size: clamp(32px, 4.5rem, 80px);
-  line-height: 70%;
+  line-height: 80%;
 }
 main .landing .textoIntro h2 {
   color: #028ac7;

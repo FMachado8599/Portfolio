@@ -1,0 +1,49 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .contactContainer{
+        justify-content: space-around;
+        gap: 5rem;
+        max-width: 800px;
+        padding: 5rem 0px;
+        & .contactInfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            gap: 10px;
+            & p{
+                color: $white;
+                font-weight: 600;
+                & span{
+                    display: block;
+                    font-weight: 200;
+                }
+            }
+            & .cellphone{
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+        & .contactForm{
+            width: 400px;
+            background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70050 100%);
+            backdrop-filter: blur(3px);
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 0.5rem 2rem rgba($blue-100, .1 );
+            & div{
+                & label{
+                    color: $white;
+                    & textarea{
+                        resize: vertical;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
