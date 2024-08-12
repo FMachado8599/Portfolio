@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 .heading1 {
   font-size: 5rem;
 }
@@ -21,6 +23,7 @@ body {
   font-size: clamp(24px, 3rem, 40px);
   font-weight: 700;
   color: #F5F5F5;
+  margin-bottom: 30px;
 }
 .titulosSeccion::after {
   content: "";
@@ -30,6 +33,17 @@ body {
   height: 2px;
   background-color: #028ac7;
   margin-top: 1rem;
+}
+
+a {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+p {
+  color: #F5F5F5;
 }
 
 .botonHamburguesa {
@@ -45,40 +59,38 @@ body {
 .aboutMe {
   overflow: visible;
   position: relative;
+  gap: 30px;
+  margin-bottom: 5vw;
 }
 .aboutMe .imgFondoAboutMe {
   position: absolute;
   opacity: 0.4;
-  height: 80%;
+  height: 100%;
   width: 100%;
-  -webkit-mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
-  mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 80%);
+  mask: radial-gradient(circle at 50%, white, transparent 80%);
 }
 .aboutMe .infoPersonal {
   height: auto;
-  max-height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-width: 900px;
   overflow: visible;
   gap: 1rem;
   position: relative;
-  margin: 0;
 }
 .aboutMe .infoPersonal .imgAboutMe {
   margin: 0;
   max-height: inherit;
   border-radius: 2rem;
   z-index: 1;
+  height: 100%;
+  box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
+  object-fit: cover;
 }
 .aboutMe .infoPersonal .infoGroup {
   gap: 1rem;
   display: flex;
   flex-direction: column;
-  width: 60%;
   height: 100%;
   max-height: inherit;
   overflow: visible;
@@ -91,7 +103,7 @@ body {
   color: #F5F5F5;
   gap: 1rem;
   border-radius: 2rem;
-  box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
+  box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
 }
 .aboutMe .infoPersonal .infoGroup .textInfoPersonal .iTitle {
   font-size: 2rem;
@@ -117,7 +129,7 @@ body {
   padding: 1.5rem;
   background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
   backdrop-filter: blur(3px);
-  box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
+  box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
 }
 .aboutMe .infoPersonal .infoGroup .skills h3 {
   color: #F5F5F5;
@@ -143,17 +155,114 @@ body {
   align-items: center;
   color: #F5F5F5;
 }
+.aboutMe .infoPersonal .infoGroup .skills .programmingSkills li .skill, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill {
+  object-fit: contain;
+  max-height: 35px;
+}
+
+.proyects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  margin-bottom: 5vw;
+}
+.proyects .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+}
+.proyects .container .card {
+  max-width: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(8, 53, 73, 0.4);
+  filter: drop-shadow(5px 5px 20px rgba(8, 53, 73, 0.5));
+}
+.proyects .container .card .webCaptureContainer {
+  position: relative;
+}
+.proyects .container .card .avatar {
+  position: absolute;
+  margin-left: 1rem;
+  width: 100px;
+  border-radius: 100%;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  top: 200px;
+}
+.proyects .container .card .avatarSvg {
+  position: absolute;
+  margin-left: 1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+  top: 200px;
+  background-color: white;
+  padding: 10px;
+}
+.proyects .container .card .cardText {
+  padding: 1rem;
+  padding-top: 70px;
+}
+.proyects .container .card .cardText .proyectTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+.proyects .container .card .cardText .proyectTitle .proyectName {
+  color: #F5F5F5;
+}
+.proyects .container .card .cardText .proyectTitle .proyectTools {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.proyects .container .card .cardText .proyectTitle .proyectTools img {
+  height: 18px;
+  opacity: 40%;
+}
+.proyects .container .card .proyectLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 1rem;
+}
+.proyects .container .card .proyectLinks .siteLinkButton {
+  font-size: 14px;
+  text-decoration: none;
+  color: #F5F5F5;
+  padding: 0.5rem;
+  background: rgba(3, 112, 161, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(3, 112, 161, 0.2);
+}
+.proyects .container .card .proyectLinks .githubLink {
+  width: 20px;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5vw;
 }
 .contact .contactContainer {
   justify-content: space-around;
-  gap: 5rem;
+  gap: 3vw;
   max-width: 800px;
-  padding: 5rem 0px;
 }
 .contact .contactContainer .contactInfo {
   display: flex;
@@ -170,18 +279,29 @@ body {
   display: block;
   font-weight: 200;
 }
-.contact .contactContainer .contactInfo .cellphone {
+.contact .contactContainer .contactInfo .contactInfoItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+.contact .contactContainer .contactInfo .contactInfoItem .contactIcon {
+  fill: #F5F5F5;
+}
+.contact .contactContainer .contactInfo .contactInfoItem .cellphone {
   font-weight: 700;
   text-decoration: underline;
+  padding: 0;
+  margin: 0;
 }
 .contact .contactContainer .contactForm {
-  width: 400px;
+  width: clamp(350px, 30vw, 400px);
   background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.3137254902) 100%);
   backdrop-filter: blur(3px);
   gap: 1rem;
   padding: 1.5rem;
   border-radius: 2rem;
-  box-shadow: 0 0.5rem 2rem rgba(224, 245, 254, 0.1);
+  box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
 }
 .contact .contactContainer .contactForm div label {
   color: #F5F5F5;
@@ -191,88 +311,278 @@ body {
   width: 90%;
 }
 
-main .landing {
+.landing {
   height: 100svh;
   margin-top: 55px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
-main .landing .imgFondo {
+.landing .imgFondo {
   position: absolute;
   opacity: 0.2;
   z-index: 0;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   object-fit: cover;
   mask: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
 }
-main .landing .imagenPerfil {
+.landing .landingContainer {
   display: flex;
-  justify-content: end;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: 50%;
-  overflow: visible;
+  position: relative;
+  width: 80%;
+  max-height: 700px;
+  z-index: 1;
+  overflow: hidden;
 }
-main .landing .imagenPerfil::after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 800px;
-  max-height: 70%;
-  background-color: #028ac7;
-  opacity: 1;
-  z-index: 10;
-}
-main .landing .imagenPerfil img {
-  position: absolute;
-  aspect-ratio: 2/5;
-  height: 100%;
-  width: clamp(100px, 100%, 500px);
+.landing .landingContainer .profileImg {
   object-fit: contain;
-  -webkit-mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
-  mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
-}
-main .landing .imagenPerfil .fadedImg {
+  position: relative;
   z-index: 4;
-  filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(150deg);
+  mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
+  border-right: 5px solid #028ac7;
 }
-main .landing .imagenPerfil .imagenSuperior {
-  z-index: 5;
-  height: 100%;
-}
-main .landing .textoIntro {
+.landing .landingContainer .textoIntro {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  width: 50%;
-  padding-left: 2rem;
   text-align: left;
-  overflow: hidden;
   z-index: 5;
+  padding: 2rem 2rem 2rem 1rem;
+  position: relative;
+  height: 700px;
+}
+.landing .landingContainer .textoIntro::before {
+  content: "";
+  position: absolute;
   backdrop-filter: blur(3px);
-  height: 75%;
-  mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(to right, #fff 0%, #fff 50%, transparent 100%);
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  left: 0;
+  transform: translate(1rem 0px);
 }
-main .landing .textoIntro h1 {
+.landing .landingContainer .textoIntro h1 {
   color: aliceblue;
-  font-size: clamp(24px, 4rem, 60px);
-  padding-bottom: 1rem;
+  font-size: 3vw;
 }
-main .landing .textoIntro h1 span {
+.landing .landingContainer .textoIntro h1 span {
   display: block;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: clamp(32px, 4.5rem, 80px);
+  font-size: clamp(34px, 4vw, 60px);
   line-height: 80%;
+  text-wrap: balance;
 }
-main .landing .textoIntro h2 {
+.landing .landingContainer .textoIntro .workArea {
   color: #028ac7;
   font-weight: 700;
-  font-size: clamp(24px, 3rem, 40px);
+  font-size: clamp(20px, 3vw, 50px);
+  text-wrap: balance;
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    width: 100vw;
+    max-width: 400px;
+  }
+  .landing {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .landingContainer {
+    flex-direction: column;
+  }
+  .landing .landingContainer .profileImg {
+    position: relative;
+    z-index: 4;
+    height: auto;
+    width: 90vw;
+    height: inherit;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: none;
+    mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    filter: drop-shadow(5px 5px 10px #028ac7);
+  }
+  .landing .landingContainer .profileImg::before {
+    content: "";
+    position: absolute;
+    backdrop-filter: blur(3px);
+    mask: linear-gradient(to bottom, #fff 0%, #fff 50%, transparent 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .landing .landingContainer .textoIntro {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 90%;
+    text-align: left;
+    z-index: 5;
+    height: auto;
+    backdrop-filter: blur(3px);
+    margin-top: 20px;
+    padding: 2rem;
+    -webkit-mask: linear-gradient(to top, transparent 0%, #fff 10% 90%, transparent 100%), linear-gradient(to left, transparent 0%, #fff 10% 90%, transparent 100%);
+    -webkit-mask-size: 110% 110%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: source-in;
+    mask: linear-gradient(to top, transparent 0%, #fff 10% 90%, transparent 100%), linear-gradient(to left, transparent 0%, #fff 10% 90%, transparent 100%);
+    mask-size: 110% 110%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-composite: intersect;
+  }
+  .landing .landingContainer .textoIntro h1 {
+    color: aliceblue;
+    padding-bottom: 0rem;
+  }
+  .landing .landingContainer .textoIntro h1 span {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 80%;
+  }
+  .landing .landingContainer .textoIntro h2 {
+    color: #028ac7;
+    font-weight: 700;
+    font-size: clamp(24px, 3rem, 40px);
+  }
+  .aboutMe {
+    height: auto;
+  }
+  .aboutMe .imgFondoAboutMe {
+    position: absolute;
+    opacity: 0.4;
+    height: 100%;
+    width: auto;
+    mask: radial-gradient(circle at 50%, white, transparent 80%);
+  }
+  .aboutMe .infoPersonal {
+    height: auto;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    overflow: visible;
+    gap: 1rem;
+    position: relative;
+    margin: 0;
+  }
+  .aboutMe .infoPersonal .imgAboutMe {
+    margin: 0;
+    max-height: inherit;
+    border-radius: 2rem;
+    object-fit: cover;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
+  }
+  .aboutMe .infoPersonal .infoGroup {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: inherit;
+    overflow: visible;
+    background: none;
+  }
+  .aboutMe .infoPersonal .infoGroup .textInfoPersonal {
+    background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.3137254902) 100%);
+    backdrop-filter: blur(3px);
+    padding: 1.5rem;
+    color: #F5F5F5;
+    gap: 1rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
+  }
+  .aboutMe .infoPersonal .infoGroup .textInfoPersonal .iTitle {
+    font-size: 2rem;
+    filter: drop-shadow(2px 0px 0.15rem black);
+  }
+  .aboutMe .infoPersonal .infoGroup .textInfoPersonal div {
+    margin-bottom: 1rem;
+  }
+  .aboutMe .infoPersonal .infoGroup .textInfoPersonal div p {
+    margin: 0.2rem;
+    gap: 0;
+    line-height: 1rem;
+  }
+  .aboutMe .infoPersonal .infoGroup .textInfoPersonal div p span {
+    font-weight: 600;
+  }
+  .aboutMe .infoPersonal .infoGroup .skills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
+  }
+  .aboutMe .infoPersonal .infoGroup .skills h3 {
+    color: #F5F5F5;
+  }
+  .aboutMe .infoPersonal .infoGroup .skills .programmingSkills, .aboutMe .infoPersonal .infoGroup .skills .designingSkills {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  .aboutMe .infoPersonal .infoGroup .skills .programmingSkills li, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li {
+    border-radius: 0.75rem;
+    height: 50px;
+    width: 50px;
+    background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 1px 10px rgba(224, 245, 254, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F5F5F5;
+  }
+  .aboutMe .infoPersonal .infoGroup .skills .programmingSkills li .skill, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill {
+    object-fit: contain;
+    max-height: 35px;
+  }
+  .proyects {
+    margin: 5vw 5vw 5vw 5vw;
+  }
+  .proyects .container {
+    flex-direction: column;
+  }
+  .contactContainer {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5rem;
+    max-width: 800px;
+    padding: 1rem 0px;
+  }
+  .contactContainer .contactForm {
+    margin: 0 1rem;
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=stylesOP.css.map */

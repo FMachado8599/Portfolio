@@ -1,38 +1,54 @@
 .aboutMe{
     overflow: visible;
     position: relative;
+    gap: 30px;
+    margin-bottom: 5vw;
+    // & .light{
+    //     position: absolute;
+    //     display: block;
+    //     width: 50px;
+    //     height: 50px;
+    //     background-color: radial-gradient(circle at 50%, #0ea5e9 0%, #0ea5e9 5%, transparent 80%);;
+    //     opacity: 1;
+    //     animation: fade 100ms linear;
+    //     animation-iteration-count: infinite;
+    //     z-index: 10;
+    //     top: 10px;
+    //     @keyframes fade {
+    //         0%, 100% { opacity: 0 }
+    //         50% { opacity: 1 }
+    //       }
+    // }
     & .imgFondoAboutMe{
         position: absolute;
         opacity: 0.4;
-        height: 80%;
+        height: 100%;
         width: 100%;
-        -webkit-mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 70%);
-        mask-image: radial-gradient(circle, white 0%, rgba(0, 0, 0, 0) 80%);
+        mask: radial-gradient(circle at 50%, white, transparent 80%);
+    
     }
     & .infoPersonal{
         height: auto;
-        max-height: 600px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         max-width: 900px;
         overflow: visible;
         gap: 1rem;
         position: relative;
-        margin: 0;
+
         & .imgAboutMe{
             margin: 0;
             max-height: inherit;
             border-radius: 2rem;
             z-index: 1;
+            height: 100%;
+            box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
+            object-fit: cover;
         }
         & .infoGroup{
             gap: 1rem;
             display: flex;
             flex-direction: column;
-            width: 60%;
             height: 100%;
             max-height: inherit;
             overflow: visible;
@@ -44,7 +60,7 @@
                 color: $white;
                 gap: 1rem;
                 border-radius: 2rem;
-                box-shadow: 0 0.5rem 2rem rgba($blue-100, .1 );
+                box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
                 & .iTitle{
                     font-size: 2rem;
                     filter: drop-shadow(2px 0px 0.15rem black);
@@ -70,7 +86,7 @@
                 padding: 1.5rem;
                 background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70030 100%);
                 backdrop-filter: blur(3px);
-                box-shadow: 0 0.5rem 2rem rgba($blue-100, .1 );
+                box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
                 & h3{
                     color:$white;
                 }
@@ -93,10 +109,11 @@
                         justify-content: center;
                         align-items: center;
                         color: $white;
+                        & .skill{
+                            object-fit: contain;
+                            max-height: 35px;
+                        }
                     }
-                }
-                & div{
-
                 }
                 
             }

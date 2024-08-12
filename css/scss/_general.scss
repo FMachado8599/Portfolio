@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -15,6 +18,7 @@ body{
     font-size: clamp(24px,3rem,40px);
     font-weight: 700;
     color: $white;
+    margin-bottom: 30px;
     &::after{
         content: "";
         position: relative;
@@ -24,4 +28,13 @@ body{
         background-color: $blue-600;
         margin-top: 1rem;
     }
+}
+a{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+p{
+    color: $white;
 }

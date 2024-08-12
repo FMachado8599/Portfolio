@@ -10,7 +10,10 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/stylesOP.css" />
     <title>Facundo Machado</title>
   </head>
@@ -56,7 +59,12 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Gallery</a>
+                  <a
+                    class="nav-link"
+                    href="https://fmachado5899.myportfolio.com"
+                    target="_blank"
+                    >Gallery</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact</a>
@@ -74,34 +82,30 @@
           src="./media/1x/Codigo_1080px.svg"
           alt="Codigo de fondo"
         />
-        <div class="imagenPerfil">
-          <!-- <div class="filtroAzul"></div> -->
+        <div class="landingContainer">
           <img
-            class="imagenSuperior"
-            src="./media/facu_recortado.webp"
-            alt="Imagen de Facundo Machado"
-          />
-          <img
-            class="fadedImg"
-            src="./media/facu.webp"
-            alt="Imagen de fondo Facundo Machado"
-          />
+          class="profileImg"
+          src="./media/facu.webp"
+          alt="Imagen de fondo Facundo Machado"
+          >
+          <div class="textoIntro">
+            <h1 class="heading1">Hi! my name is <span>Facundo Machado</span></h1>
+            <h2 class="workArea">Front-End Developer & Designer</h2>
+          </div>
         </div>
-        <div class="textoIntro">
-          <h1 class="heading1">Hi! my name is <span>Facundo Machado</span></h1>
-          <h2>Developer & Designer</h2>
-        </div>
+
       </section>
       <section
         class="aboutMe container d-flex justify-content-center align-items-center flex-column"
       >
+        <div class="light"></div>
         <img
           class="imgFondoAboutMe"
           src="./media/1x/Codigo_1080px.svg"
           alt="foto fondo about me"
         />
         <h2 class="titulosSeccion">About Me</h2>
-        <div class="infoPersonal mx-5 my-5 px-0">
+        <div class="infoPersonal  px-0">
           <img
             class="imgAboutMe md-6 shadow"
             src="./media/facu.webp"
@@ -111,38 +115,53 @@
             <div class="textInfoPersonal md-6">
               <h2 class="iTitle">Who am I?</h2>
               <div>
-                <p><span>Born:</span> 8 may 1999</p>
+                <p><span>Born:</span> 8 May 1999</p>
                 <p><span>From:</span> Montevideo, Uruguay</p>
               </div>
               <p>
-                Perseverant and stoic designer and developer, adept at making
+                Perseverant and dedicated developer & designer, adept at making
                 decisions under pressure. Quick learner, versatile, and
                 empathetic. Creative focus on quality and detail, while
-                maintaining efficiency
+                maintaining efficiency.
               </p>
             </div>
             <div class="skills">
-              <h3>Programming</h3>
+              <h3>Developing</h3>
               <ul class="programmingSkills">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
+                <li>
+                  <img src="./media/SVG/html-blanco.svg" class="skill"></img>
+                </li>
+                <li><img src="./media/SVG/css-blanco.svg" class="skill"></img></li>
+                <li><img src="./media/SVG/js-blanco.svg" class="skill"></img></li>
+                <li>
+                  <img src="./media/SVG/react-blanco.svg" class="skill"></img>
+                </li>
+                <li>
+                  <img src="./media/SVG/bootstrap-blanco.svg" class="skill"></img>
+                </li>
+                <li>
+                  <img src="./media/SVG/sass-blanco.svg" class="skill"></img>
+                </li>
+                <li><img src="./media/SVG/git-blanco.svg" class="skill"></img></li>
+                <li>
+                  <img src="./media/SVG/github-blanco.svg" class="skill"></img>
+                </li>
+                <li>
+                  <img src="./media/SVG/java - blanco.svg" class="skill"></img>
+                </li>
+                <li>
+                  <img src="./media/SVG/wordpress-blanco.svg" class="skill"></img>
+                </li>
               </ul>
               <h3>Designing</h3>
               <ul class="designingSkills">
-                <li class="">A</li>
-                <li class="">B</li>
-                <li class="">C</li>
-                <li class="">D</li>
-                <li class="">E</li>
-                <li class="">F</li>
-                <li class="">G</li>
-                <li class="">H</li>
+                <li class=""><img class="skill" src="./media/SVG/photoshop-blanco.svg" alt=""></li>
+                <li class=""><img class="skill" src="./media/SVG/illustrator-blanco.svg" alt=""></li>
+                <li class=""><img class="skill" src="./media/SVG/indesign-blanco.svg" alt=""></li>
+                <li class=""><img class="skill" src="./media/SVG/dimension-blanco.svg" alt=""></li>
+                <li class=""><img class="skill" src="./media/SVG/premiere-pro-blanco.svg" alt=""></li>
+                <li class=""><img class="skill" src="./media/SVG/figma-blanco.svg" alt=""></li>
+                <li class=""><img class="skill" src="./media/SVG/corel-blanco.svg" alt=""></li>
               </ul>
             </div>
           </div>
@@ -150,6 +169,73 @@
       </section>
       <section class="proyects">
         <h2 class="titulosSeccion">Proyects</h2>
+        <div class="container">
+          <div class="card">
+            <div class="webCaptureContainer">
+              <img
+              class="webCapture"
+              src="./media/1x/Screenshot 2024-05-22 203712.png"
+              alt=""
+              />
+            </div>
+            <img
+              src="./media/1x/logos/BUNA ICON.svg"
+              alt="buna logo"
+              class="avatar"
+            />
+            <div class="cardText">
+              <div class="proyectTitle">
+                <h3 class="proyectName">Buna Café</h3>
+                <div class="proyectTools">
+                  <img src="./media/SVG/html-blanco.svg" alt="tech 1" />
+                  <img src="./media/SVG/css-blanco.svg" alt="tech 2" />
+                  <img src="./media/SVG/sass-blanco.svg" alt="tech 3" />
+                  <img src="./media/SVG/bootstrap-blanco.svg" alt="tech 4" />
+                  <img src="" alt="" />
+                </div>
+              </div>
+              <p>Static web with HTML, CSS, SASS, and Bootstrap. Overcame responsive design challenges and learned style optimization.</p>
+            </div>
+            <div class="proyectLinks">
+              <a class="siteLinkButton" href="https://bunacafeuy.com">Visit site</a>
+              <a target="_blank" href="https://github.com/FMachado8599/Buna-Cafe-3.0">
+                <img src="./media/SVG/github-blanco.svg" class="skill githubLink"></img>
+              </a>
+            </div>
+          </div>
+          <div class="card">
+          <div class="webCaptureContainer">
+            <img
+            class="webCapture"
+            src="./media/1x/Screenshot 2024-08-11 224306.png"
+            alt=""
+            />
+          </div>
+          <svg fill="#2d3c25" class="avatarSvg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="24px" height="24px">
+            <path d="M 13.212891 3.7265625 C 11.830746 3.6832898 10.388609 3.9844382 9.3144531 5.0585938 A 1.50015 1.50015 0 0 0 9.3144531 5.0605469 C 8.2874326 6.0889025 7.6643753 7.4559628 7.5683594 8.9082031 A 1.50015 1.50015 0 0 0 7.5664062 8.9980469 L 7.5 19.972656 C 4.7922063 21.937912 4.4533225 25.927932 6.828125 28.302734 L 8.609375 30.083984 C 7.8023049 32.067769 8.1395885 34.442323 9.7539062 36.056641 L 11.439453 37.744141 C 13.053866 39.358553 15.428496 39.693521 17.412109 38.886719 L 19.472656 40.947266 C 21.737306 43.21055 25.512366 43.047379 27.572266 40.595703 A 1.50015 1.50015 0 0 0 27.671875 40.462891 L 27.982422 40 A 1.50015 1.50015 0 0 0 28.005859 40 L 39.498047 39.929688 A 1.50015 1.50015 0 0 0 39.587891 39.925781 C 41.039219 39.829821 42.406625 39.210562 43.435547 38.181641 C 44.511678 37.10551 44.81889 35.662215 44.78125 34.271484 C 44.74361 32.880754 44.343694 31.379674 43.019531 30.453125 C 41.355545 29.287648 38.05342 27.4751 36.8125 26.785156 L 37.013672 26.482422 A 1.50015 1.50015 0 0 0 37.029297 26.460938 C 37.914991 25.082804 37.718395 23.249645 36.560547 22.091797 L 34.197266 19.730469 C 34.569102 18.522344 34.505333 17.210411 33.566406 16.271484 L 31.224609 13.929688 A 1.50015 1.50015 0 0 0 31.224609 13.927734 C 30.285318 12.989764 28.972122 12.92633 27.763672 13.298828 L 25.427734 10.962891 C 24.250462 9.7838767 22.378926 9.604501 20.998047 10.533203 A 1.50015 1.50015 0 0 0 20.978516 10.546875 L 20.666016 10.763672 C 19.961856 9.7047132 18.061598 6.8300096 17.013672 5.4355469 C 16.063652 4.1715293 14.595035 3.7698352 13.212891 3.7265625 z M 13.117188 6.7265625 C 13.875042 6.7502895 14.500255 7.0833457 14.615234 7.2363281 C 15.491656 8.4025718 17.501543 11.424524 18.207031 12.480469 L 10.511719 17.849609 L 10.566406 9.0976562 C 10.616346 8.3752334 10.922693 7.6932064 11.435547 7.1796875 C 11.614391 7.0008431 12.359331 6.7028352 13.117188 6.7265625 z M 23.001953 12.935547 C 23.111937 12.945734 23.217323 12.99454 23.304688 13.082031 A 1.50015 1.50015 0 0 0 23.306641 13.083984 L 25.132812 14.910156 L 10.435547 27.667969 L 8.9492188 26.181641 C 7.8308631 25.063285 7.9847063 23.279081 9.2773438 22.369141 L 22.693359 13.007812 L 22.673828 13.023438 C 22.777389 12.953788 22.891969 12.92536 23.001953 12.935547 z M 28.769531 15.898438 C 28.888494 15.90318 29.006225 15.953625 29.103516 16.050781 L 31.445312 18.392578 C 31.639751 18.587015 31.650707 18.860566 31.472656 19.070312 L 17.226562 35.482422 A 1.50015 1.50015 0 0 0 17.222656 35.486328 C 16.259782 36.603339 14.605201 36.665748 13.5625 35.623047 L 11.875 33.935547 C 10.832084 32.892631 10.892081 31.238299 12.009766 30.275391 A 1.50015 1.50015 0 0 0 12.013672 30.271484 L 28.425781 16.023438 C 28.530376 15.934651 28.650569 15.893695 28.769531 15.898438 z M 32.585938 22.361328 L 34.4375 24.212891 C 34.609652 24.385043 34.638164 24.632024 34.505859 24.837891 L 25.259766 38.673828 C 24.299694 39.800008 22.64254 39.872377 21.59375 38.824219 L 19.828125 37.060547 L 32.585938 22.361328 z M 35.144531 29.28125 C 36.292603 29.928512 40.028563 32.020453 41.298828 32.910156 C 41.426666 32.999606 41.76064 33.591996 41.78125 34.353516 C 41.80186 35.115035 41.491322 35.883678 41.314453 36.060547 C 40.801501 36.573499 40.1198 36.879689 39.396484 36.929688 L 29.994141 36.988281 L 35.144531 29.28125 z"/>
+          </svg>
+          <div class="cardText">
+            <div class="proyectTitle">
+              <h3 class="proyectName">Doux</h3>
+              <div class="proyectTools">
+                <img src="./media/SVG/html-blanco.svg" alt="tech 1" />
+                <img src="./media/SVG/css-blanco.svg" alt="tech 2" />
+                <img src="./media/SVG/sass-blanco.svg" alt="tech 3" />
+                <img src="./media/SVG/bootstrap-blanco.svg" alt="tech 4" />
+                <img src="./media/SVG/react-blanco.svg" alt="tech 5">
+                <img src="" alt="" />
+              </div>
+            </div>
+            <p>My first implementation of React. Routing and context managing where my favorite parts, while connecting the proyect to Firebase was interesting.</p>
+          </div>
+          <div class="proyectLinks">
+            <a class="siteLinkButton" href="https://douxboulangerie.netlify.app">Visit site</a>
+            <a target="_blank" href="https://github.com/FMachado8599/E-Commerce-React">
+              <img src="./media/SVG/github-blanco.svg" class="skill githubLink"></img>
+            </a>
+          </div>
+          </div>
+        </div>
       </section>
       <section class="contact">
         <h2 class="titulosSeccion">Contact</h2>
@@ -160,9 +246,54 @@
             <p>
               Have any questions or offers?<span>Feel free to contact me!</span>
             </p>
-            <p>Montevideo, Uruguay</p>
-            <p>f.machado5899@gmail.com</p>
-            <p class="cellphone">+59895018712</p>
+            <div class="contactInfoItem">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-geo-alt contactIcon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
+                />
+                <path
+                  d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                />
+              </svg>
+              <p>Montevideo, Uruguay</p>
+            </div>
+            <div class="contactInfoItem">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-envelope contactIcon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                />
+              </svg>
+              <p>f.machado5899@gmail.com</p>
+            </div>
+            <div class="contactInfoItem">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-telephone contactIcon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+              <p class="cellphone">+59895018712</p>
+            </div>
           </div>
           <form class="contactForm">
             <div class="mb-3">
@@ -171,7 +302,7 @@
               >
               <input
                 type="email"
-                class="form-control"
+                class="form-control rounded"
                 id="exampleFormControlInput1"
                 placeholder="name@example.com"
               />
@@ -181,7 +312,7 @@
                 >Send me a message</label
               >
               <textarea
-                class="form-control"
+                class="form-control rounded"
                 id="exampleFormControlTextarea1"
                 rows="3"
               >
@@ -199,5 +330,7 @@ Hi! We would love to get in touch with you and find out about your services. Tha
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
   </body>
 </html>

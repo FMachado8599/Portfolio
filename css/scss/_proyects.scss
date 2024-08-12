@@ -1,0 +1,96 @@
+.proyects{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    margin-bottom: 5vw;
+    & .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+        & .card{
+            max-width: 400px;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            background-color: rgba(8, 53, 73, .4);
+            filter: drop-shadow(5px 5px 20px rgba(8, 53, 73, .5));
+            
+            & .webCaptureContainer{
+                position: relative;
+            }
+            & .avatar{
+                position: absolute;
+                margin-left: 1rem;
+                width: 100px;
+                border-radius: 100%;
+                filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
+                top: 200px;
+            }
+            & .avatarSvg{
+                position: absolute;
+                margin-left: 1rem;
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                filter: drop-shadow(5px 5px 5px rgba(0,0,0,.3));
+                top: 200px;
+                background-color: white;
+                padding: 10px;
+            }
+            & .cardText{
+                padding: 1rem;
+                padding-top: 70px;
+                & .proyectTitle{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 20px;
+                    padding-bottom: 10px;
+                    & .proyectName{
+                        color: $white;
+                    }
+                    & .proyectTools{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 10px;
+                        & img{
+                            height: 18px;
+                            opacity: 40%;
+                        }
+                    }
+                }
+            }
+            & .proyectLinks{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                padding: 1rem;
+                & .siteLinkButton{
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: $white;
+                    padding: .5rem;
+                    background: rgba(3, 112, 161, .2);
+                    border-radius: 5px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgba(3, 112, 161, .2);
+                }
+                & .githubLink{
+                    width: 20px;
+                }
+            }
+        }
+    }
+    
+}
+// *{
+//     border: 1px solid blue;
+// }

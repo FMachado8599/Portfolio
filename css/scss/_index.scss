@@ -1,97 +1,101 @@
 @import '_aboutMe';
+@import '_proyects';
+@import '_slider';
 @import '_contact';
-main{
-    & .landing{
-        height: 100svh;
-        margin-top: 55px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+
+.landing{
+    height: 100svh;
+    margin-top: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
         & .imgFondo{
             position: absolute;
             opacity: 0.2;
             z-index: 0;
             top: 0;
             height: 100%;
-            width: 100%;
+            width: 100vw;
             object-fit: cover;
             mask: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0) 100%);
+            to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0) 100%);
         }
-        & .imagenPerfil{
+        & .landingContainer{
             display: flex;
-            justify-content: end;
-            align-items: center;
-            width: 50%;
-            overflow: visible;
-            &::after{
-                content: "";
-                position: absolute;
-                width: 5px;
-                height: 800px;
-                max-height: 70%;
-                background-color: $blue-600;
-                opacity: 1;
-                z-index: 10;
-            }
-            & img{
-                position: absolute;
-                aspect-ratio: 2/5;
-                height: 100%;
-                width: clamp(100px,100%,500px);
-                object-fit: contain;
-                -webkit-mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
-                mask-image: radial-gradient(ellipse 200% 50% at right center, black 40%, transparent 50%);
-            }
-            & .fadedImg{
-                z-index: 4;
-                filter: sepia(100%) saturate(200%) brightness(70%) hue-rotate(150deg)
-            }
-            & .imagenSuperior{
-                z-index: 5;
-                height: 100%;
-            }
-        }
-        & .textoIntro{
-            display: flex;
+            flex-direction: row;
             justify-content: center;
-            align-items: start;
-            flex-direction: column;
-            width: 50%;
-            padding-left: 2rem;
-            text-align: left;
+            align-items: center;
+            position: relative;
+            width: 80%;
+            max-height: 700px;
+            z-index: 1;
             overflow: hidden;
-            z-index: 5;
-            backdrop-filter: blur(3px);
-            height: 75%;
-            mask: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 25%,
-    rgba(0, 0, 0, 1) 75%,
-    rgba(0, 0, 0, 0) 100%);
-            & h1{
-                color: aliceblue;
-                font-size: clamp(24px,4rem,60px);
-                padding-bottom: 1rem;
-                & span{
-                    display: block;
-                    text-transform: uppercase;
+            // &::after{
+            //     content: "";
+            //     position: absolute;
+            //     display: block;
+            //     width: 5px;
+            //     height: 100%;
+            //     background-color: $blue-600;
+            //     opacity: 1;
+            //     z-index: 10;
+            // }
+            & .profileImg{
+                object-fit: contain;
+                position: relative;
+                z-index: 4;
+                mask-image: linear-gradient(
+                to left,
+                rgba(0, 0, 0, 1) 0%,
+                rgba(0, 0, 0, 1) 60%,
+                rgba(0, 0, 0, 0) 100%);
+                border-right: 5px solid $blue-600;
+
+            }
+            & .textoIntro{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                text-align: left;
+                z-index: 5;
+                padding: 2rem 2rem 2rem 1rem;
+                position: relative;
+                height: 700px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    backdrop-filter: blur(3px);
+                    mask: linear-gradient(to right, #fff 0%, #fff 50%, transparent 100%);
+                    width: 100%;
+                    height: 100%;
+                    z-index: -2;
+                    left: 0;
+                    transform: translate(1rem 0px);
+                }
+                & h1{
+                    color: aliceblue;
+                    font-size: 3vw;
+                    & span{
+                        display: block;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: clamp(34px,4vw,60px);
+                        line-height: 80%;
+                        text-wrap: balance;
+                    }
+                }
+                & .workArea{
+                    color: $blue-600;
                     font-weight: 700;
-                    font-size: clamp(32px,4.5rem,80px);
-                    line-height: 80%;
+                    font-size: clamp(20px,3vw, 50px);
+                    text-wrap: balance;
                 }
             }
-            & h2{
-                color: $blue-600;
-                font-weight: 700;
-                font-size: clamp(24px,3rem,40px);
-            }
         }
-        
+
     }
-}
