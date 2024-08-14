@@ -1,0 +1,39 @@
+{
+  "landing": {
+    "heading1": "¡Hola! Mi nombre es ",
+    "name": "Facundo Machado",
+    "workArea": "Desarrollador Front-End & Diseñador"
+  },
+  "aboutMe": {
+    "sectionTitle": "Sobre Mí",
+    "whoAmI": {
+      "title": "¿Quién soy?",
+      "born": "Fecha de nacimiento:",
+      "date": " 8 de mayo de 1999",
+      "from": "De:",
+      "location": "Montevideo, Uruguay",
+      "description": "Desarrollador y diseñador perseverante y dedicado, con habilidad para tomar decisiones bajo presión. Aprendiz rápido, versátil y empático. Enfoque creativo en la calidad y el detalle, manteniendo la eficiencia."
+    },
+    "developingSkills": "Desarrollo",
+    "designingSkills": "Diseño"
+  },
+  "projects": {
+    "sectionTitle": "Proyectos",
+    "project1": {
+      "name": "Buna Café",
+      "description": "Web estática con HTML, CSS, SASS y Bootstrap. Superé desafíos de diseño responsivo y aprendí optimización de estilos."
+    },
+    "project2": {
+      "name": "Doux",
+      "description": "Mi primera implementación de React. El enrutamiento y la gestión de contexto fueron mis partes favoritas, mientras que conectar el proyecto a Firebase fue interesante."
+    }
+  },
+  "contact": {
+    "sectionTitle": "Contacto",
+    "message": "¿Tienes alguna pregunta u oferta?",
+    "message2": " ¡No dudes en contactarme!",
+    "location": "Montevideo, Uruguay"
+  }
+}
+
+  
