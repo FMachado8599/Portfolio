@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 .heading1 {
@@ -133,9 +134,9 @@ p {
 }
 .aboutMe .infoPersonal .infoGroup .skills h3 {
   color: #F5F5F5;
+  margin-bottom: 1rem;
 }
-.aboutMe .infoPersonal .infoGroup .skills .programmingSkills, .aboutMe .infoPersonal .infoGroup .skills .designingSkills {
-  max-width: 100%;
+.aboutMe .infoPersonal .infoGroup .skills .developingSkills, .aboutMe .infoPersonal .infoGroup .skills .designingSkills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -143,7 +144,7 @@ p {
   padding: 0;
   margin: 0;
 }
-.aboutMe .infoPersonal .infoGroup .skills .programmingSkills li, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li {
+.aboutMe .infoPersonal .infoGroup .skills .developingSkills li, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li {
   border-radius: 0.75rem;
   height: 50px;
   width: 50px;
@@ -154,10 +155,71 @@ p {
   justify-content: center;
   align-items: center;
   color: #F5F5F5;
+  overflow: visible;
 }
-.aboutMe .infoPersonal .infoGroup .skills .programmingSkills li .skill, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill {
+.aboutMe .infoPersonal .infoGroup .skills .developingSkills li .skill, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill {
   object-fit: contain;
   max-height: 35px;
+  transition: opacity 200ms ease-in-out;
+  opacity: 1;
+  background-color: transparent;
+}
+.aboutMe .infoPersonal .infoGroup .skills .developingSkills li .skill:hover, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Luz tenue en hover */
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Sombra de color en hover */
+  filter: brightness(1.5); /* Aumenta la luminosidad del ícono */
+}
+.aboutMe .infoPersonal .infoGroup .skills .developingSkills li .skill:hover svg path, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill:hover svg path {
+  fill: currentColor;
+}
+.aboutMe .infoPersonal .infoGroup .skills .developingSkills li .skill.fade-out, .aboutMe .infoPersonal .infoGroup .skills .designingSkills li .skill.fade-out {
+  opacity: 0;
+}
+
+.skills {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.skills h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #F5F5F5;
+}
+.skills .skillsField .skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skills .skillsField .skills-grid .skill-icon {
+  border-radius: 0.75rem;
+  height: 50px;
+  width: 50px;
+  background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 1px 10px rgba(224, 245, 254, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+.skills .skillsField .skills-grid .skill-icon img {
+  object-fit: contain;
+  height: 35px;
+  transition: all 0.5s ease;
+}
+.skills .skillsField .skills-grid .skill-icon:hover::after {
+  opacity: 1;
+}
+.skills .skillsField .skills-grid .skill-icon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .proyects {
@@ -185,6 +247,10 @@ p {
 }
 .proyects .container .card .webCaptureContainer {
   position: relative;
+}
+.proyects .container .card .webCaptureContainer .webCapture {
+  height: 250px;
+  width: 100%;
 }
 .proyects .container .card .avatar {
   position: absolute;
@@ -303,12 +369,22 @@ p {
   border-radius: 2rem;
   box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
 }
+.contact .contactContainer .contactForm div .text-input:focus {
+  border: 1px solid #028ac7;
+  box-shadow: 0px 0px 10px #028ac7;
+}
 .contact .contactContainer .contactForm div label {
   color: #F5F5F5;
 }
 .contact .contactContainer .contactForm div label textarea {
   resize: vertical;
   width: 90%;
+}
+.contact .contactContainer .contactForm .formSendButton {
+  padding: 0.5rem 2rem;
+  background-color: #028ac7;
+  color: #f0faff;
+  border-radius: 0.8rem;
 }
 
 .landing {

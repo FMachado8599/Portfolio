@@ -89,9 +89,9 @@
                 box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
                 & h3{
                     color:$white;
+                    margin-bottom: 1rem;
                 }
-                & .programmingSkills, .designingSkills{
-                    max-width: 100%;
+                & .developingSkills, .designingSkills{
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
@@ -109,10 +109,26 @@
                         justify-content: center;
                         align-items: center;
                         color: $white;
+                        overflow: visible;
                         & .skill{
                             object-fit: contain;
                             max-height: 35px;
+                            transition: opacity 200ms ease-in-out;
+                            opacity: 1;
+                            background-color: transparent;
+                            &:hover {
+                                background-color: rgba(255, 255, 255, 0.1); /* Luz tenue en hover */
+                                box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Sombra de color en hover */
+                                filter: brightness(1.5); /* Aumenta la luminosidad del ícono */
+                              }
+                              
+                              &:hover svg path {
+                                fill: currentColor;
+                              }
                         }
+                        & .skill.fade-out {
+                            opacity: 0;
+                          }
                     }
                 }
                 
@@ -120,3 +136,52 @@
         }
     }
 }
+.skills {
+    max-width: 1200px;
+    margin: 0 auto;
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #F5F5F5;
+    }
+    & .skillsField{
+        & .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            & .skill-icon {
+                border-radius: 0.75rem;
+                height: 50px;
+                width: 50px;
+                background: radial-gradient(circle at 0%, rgba(12, 80, 110, 0.3764705882) 0%, rgba(3, 112, 161, 0.1882352941) 100%);
+                backdrop-filter: blur(3px);
+                box-shadow: 0 1px 10px rgba(224, 245, 254, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                object-fit: contain;
+                    & img {
+                        object-fit: contain;
+                        height: 35px;
+                        transition: all 0.5s ease;
+                    }
+                    &:hover::after {
+                        opacity: 1;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 50%;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+            }
+        }
+    }
+}
+
+

@@ -47,6 +47,10 @@
             border-radius: 2rem;
             box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
             & div{
+                & .text-input:focus{
+                    border: 1px solid $blue-600;
+                    box-shadow: 0px 0px 10px $blue-600;
+                }
                 & label{
                     color: $white;
                     & textarea{
@@ -54,6 +58,13 @@
                         width: 90%;
                     }
                 }
+
+            }
+            & .formSendButton{
+                padding: .5rem 2rem;
+                background-color: $blue-600;
+                color: $blue-50;
+                border-radius: .8rem;
             }
         }
     }

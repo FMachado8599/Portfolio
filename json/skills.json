@@ -1,0 +1,25 @@
+{
+    "developing": [
+      { "name": "HTML", "src": "../media/SVG/html-blanco.svg", "hoverSrc": "./media/SVG/html.svg" },
+      { "name": "CSS", "src": "../media/SVG/css-blanco.svg", "hoverSrc": "./media/SVG/css.svg" },
+      { "name": "JavaScript", "src": "../media/SVG/js-blanco.svg", "hoverSrc": "./media/SVG/js.svg" },
+      { "name": "React", "src": "../media/SVG/react-blanco.svg", "hoverSrc": "./media/SVG/react.svg" },
+      { "name": "Bootstrap", "src": "../media/SVG/bootstrap-blanco.svg", "hoverSrc": "./media/SVG/bootstrap.svg" },
+      { "name": "SASS", "src": "../media/SVG/sass-blanco.svg", "hoverSrc": "./media/SVG/sass.svg" },
+      { "name": "Git", "src": "../media/SVG/git-blanco.svg", "hoverSrc": "./media/SVG/git.svg" },
+      { "name": "GitHub", "src": "../media/SVG/github-blanco.svg", "hoverSrc": "./media/SVG/github.svg" },
+      { "name": "Java", "src": "../media/SVG/java-blanco.svg", "hoverSrc": "./media/SVG/java.svg" },
+      { "name": "WordPress", "src": "../media/SVG/wordpress-blanco.svg", "hoverSrc": "./media/SVG/wordpress.svg" }
+    ],
+    "designing": [
+      { "name": "Photoshop", "src": "../media/SVG/photoshop-blanco.svg", "hoverSrc": "./media/SVG/photoshop.svg" },
+      { "name": "Illustrator", "src": "../media/SVG/illustrator-blanco.svg", "hoverSrc": "./media/SVG/illustrator.svg" },
+      { "name": "InDesign", "src": "../media/SVG/indesign-blanco.svg", "hoverSrc": "./media/SVG/indesign.svg" },
+      { "name": "Dimension", "src": "../media/SVG/dimension-blanco.svg", "hoverSrc": "./media/SVG/dimension.svg" },
+      { "name": "Premiere Pro", "src": "../media/SVG/premiere-pro-blanco.svg", "hoverSrc": "./media/SVG/premiere-pro.svg" },
+      { "name": "Figma", "src": "../media/SVG/figma-blanco.svg", "hoverSrc": "./media/SVG/figma.svg" },
+      { "name": "CorelDRAW", "src": "../media/SVG/corel-blanco.svg", "hoverSrc": "./media/SVG/corel.svg" }
+    ]
+  }
+  
+  

@@ -73,6 +73,10 @@
             </div>
           </div>
         </div>
+        <div class="lang">
+          <button data-language="es"></button>
+          <button data-language="en"></button>
+        </div>
       </nav>
     </header>
     <main>
@@ -125,44 +129,15 @@
                 maintaining efficiency.
               </p>
             </div>
-            <div class="skills">
-              <h3>Developing</h3>
-              <ul class="programmingSkills">
-                <li>
-                  <img src="./media/SVG/html-blanco.svg" class="skill"></img>
-                </li>
-                <li><img src="./media/SVG/css-blanco.svg" class="skill"></img></li>
-                <li><img src="./media/SVG/js-blanco.svg" class="skill"></img></li>
-                <li>
-                  <img src="./media/SVG/react-blanco.svg" class="skill"></img>
-                </li>
-                <li>
-                  <img src="./media/SVG/bootstrap-blanco.svg" class="skill"></img>
-                </li>
-                <li>
-                  <img src="./media/SVG/sass-blanco.svg" class="skill"></img>
-                </li>
-                <li><img src="./media/SVG/git-blanco.svg" class="skill"></img></li>
-                <li>
-                  <img src="./media/SVG/github-blanco.svg" class="skill"></img>
-                </li>
-                <li>
-                  <img src="./media/SVG/java - blanco.svg" class="skill"></img>
-                </li>
-                <li>
-                  <img src="./media/SVG/wordpress-blanco.svg" class="skill"></img>
-                </li>
-              </ul>
-              <h3>Designing</h3>
-              <ul class="designingSkills">
-                <li class=""><img class="skill" src="./media/SVG/photoshop-blanco.svg" alt=""></li>
-                <li class=""><img class="skill" src="./media/SVG/illustrator-blanco.svg" alt=""></li>
-                <li class=""><img class="skill" src="./media/SVG/indesign-blanco.svg" alt=""></li>
-                <li class=""><img class="skill" src="./media/SVG/dimension-blanco.svg" alt=""></li>
-                <li class=""><img class="skill" src="./media/SVG/premiere-pro-blanco.svg" alt=""></li>
-                <li class=""><img class="skill" src="./media/SVG/figma-blanco.svg" alt=""></li>
-                <li class=""><img class="skill" src="./media/SVG/corel-blanco.svg" alt=""></li>
-              </ul>
+            <div id="skills-container" class="skills">
+              <div id="developing" class="skillsField">
+                <h2>Developing</h2>
+                <div class="skills-grid"></div>
+              </div>
+              <div id="designing" class="skillsField">
+                <h2>Designing</h2>
+                <div class="skills-grid"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -297,28 +272,40 @@
           </div>
           <form class="contactForm">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
+              <label for="name" class="form-label"
+                >Name</label
+              >
+              <input
+                type="name"
+                class="form-control rounded text-input"
+                id="email"
+                placeholder="Personal or company name" 
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label"
                 >Email address</label
               >
               <input
                 type="email"
-                class="form-control rounded"
-                id="exampleFormControlInput1"
+                class="form-control rounded text-input"
+                id="email"
                 placeholder="name@example.com"
               />
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label"
+              <label for="message" class="form-label"
                 >Send me a message</label
               >
               <textarea
-                class="form-control rounded"
-                id="exampleFormControlTextarea1"
+                class="form-control rounded text-input"
+                id="message"
                 rows="3"
               >
 Hi! We would love to get in touch with you and find out about your services. Thank You.</textarea
               >
             </div>
+            <button class="formSendButton" id="sendButton">Send</button>
           </form>
         </div>
       </section>
