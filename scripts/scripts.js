@@ -42,6 +42,12 @@ async function createSkillIcon(skill) {
     img.src = skill.src;
     img.alt = skill.name;
     
+    const blurImg = document.createElement('img');
+    blurImg.src = skill.hoverSrc;
+    blurImg.className = 'img-blur';
+    blurImg.alt = '';  // Decorative image, no alt text needed
+    
+    div.appendChild(blurImg);
     div.appendChild(img);
 
     const color = await fetchSvgColor(skill.hoverSrc);

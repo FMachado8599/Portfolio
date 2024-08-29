@@ -22,6 +22,7 @@
             & .webCaptureContainer{
                 position: relative;
                 & .webCapture{
+                    object-fit: cover;
                     height: 250px;
                     width: 100%;
                 }

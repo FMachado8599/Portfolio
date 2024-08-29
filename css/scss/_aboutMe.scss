@@ -165,8 +165,25 @@
                         height: 35px;
                         transition: all 0.5s ease;
                     }
-                    &:hover::after {
-                        opacity: 1;
+                    & .img-blur{
+                        position: absolute;
+                        z-index: -1;
+                        transition: all 0.3s ease;
+                        opacity: 0;
+                        // &:hover{
+                        //     filter: blur(15px) contrast(200%);
+                        //     opacity: 1;
+                        // }
+                    }
+                    &:hover{
+                        &::after {
+                            opacity: 1;
+                        }
+                        & .img-blur {
+                            opacity: 1;
+                            scale: 1.2;
+                            filter: blur(15px) contrast(300%);
+                        }
                     }
                     &::after {
                         content: '';
@@ -184,4 +201,13 @@
     }
 }
 
-
+// .img-blur{
+//     position: absolute;
+//     z-index: -1;
+//     width: 100%;
+//     height: 100%;
+//     transition: all 0.3s ease;
+//     &:hover{
+//         filter:  blur(5px) contrast(200%);
+//     }
+// }
