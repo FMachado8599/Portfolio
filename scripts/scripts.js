@@ -84,3 +84,20 @@ async function populateSkills() {
 }
 
 document.addEventListener('DOMContentLoaded', populateSkills);
+
+// async function uploadImg(gallery) {
+//     const img = document.createElement('img');
+//     img.className = 'galleryImg';
+//     img.src = gallery.src;
+//     img.alt = gallery.name;
+//     return img; // Devolver el elemento img en lugar de una variable no definida
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollButton = document.getElementById('contactScrollButton');
+    const section2 = document.getElementById('contact');
+
+    scrollButton.addEventListener('click', function() {
+        section2.scrollIntoView({ behavior: 'smooth' });
+    });
+});
