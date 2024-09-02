@@ -48,6 +48,8 @@
                 object-fit: contain;
                 position: relative;
                 z-index: 4;
+                width: 70%;
+                aspect-ratio: 3/4;
                 mask-image: linear-gradient(
                 to left,
                 rgba(0, 0, 0, 1) 0%,

@@ -5,51 +5,6 @@
     header{
         width: 100vw;
         max-width: 400px;
-        & .barraNav{
-            & .container-fluid{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-
-                & .offcanvas{
-                    background-color: rgba(from $blue-900 r g b /.5)!important;                 
-                    height: 100dvh;
-                    & .offcanvas-header{
-                        border-bottom: 1px solid rgba(from $blue-300 r g b / .4);
-                        backdrop-filter: blur(5px);   
-                        & h5{
-                            font-size: 2rem;
-                        }
-                    }
-                    & .offcanvas-body{
-                        backdrop-filter: blur(5px);   
-                        & .navbar-nav{
-                            & li{
-                                & a{
-                                    font-size: 1.8rem;
-                                    color: rgba(from $blue-100 r g b / 1);
-                                    &:active{
-                                        color: white;
-                                        text-decoration: underline white;
-                                        text-underline-offset: 10px;
-                                    }
-                                    &:focus{
-                                        color: white;
-                                        text-decoration: underline white;
-                                        text-underline-offset: 10px;
-                                    }
-                                }
-                            }
-                        }
-                    } 
-                }
-            }
-            & .lang{
-                display: none;
-                height: none;
-            }
-        }
     }
     .landing{
         height: 100dvh;
@@ -63,9 +18,9 @@
                 position: relative;
                 z-index: 4;
                 height: auto;
-                width: 70vw;
-                max-width: 350px;
+                width: 90vw;
                 height: inherit;
+                max-height: 300px;
                 object-fit: cover;
                 border-radius: 1rem;
                 border: none;
@@ -73,7 +28,7 @@
                     to left,
                     rgba(0, 0, 0, 1) 0%,
                     rgba(0, 0, 0, 1) 100%);
-                filter: drop-shadow(0px 0px 20px $blue-600);
+                filter: drop-shadow(5px 5px 10px $blue-600);
                 &::before{
                     content: "";
                     position: absolute;
@@ -252,7 +207,6 @@
     .proyects{
         margin: 5vw 0vw 5vw 0vw;
         padding: 0 5vw;
-        
         & .container{
             flex-direction: column;
             padding: 0;

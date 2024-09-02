@@ -1,3 +1,5 @@
+// ---------- Cargado de imagenes para galeria ----------//
+
 window.onload = function() {
     fetch('../json/gallery.json')
         .then(response => {
@@ -30,6 +32,8 @@ window.onload = function() {
         })
         .catch(error => console.error('Error:', error));
 }
+ 
+// ---------- Overlay de imagen en pantalla completa ----------//
 
 const gallery = document.getElementById('gallery');
 const fullscreenOverlay = document.getElementById('fullscreenOverlay');

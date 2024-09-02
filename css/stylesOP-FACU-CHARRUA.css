@@ -47,11 +47,6 @@ p {
   color: #F5F5F5;
 }
 
-.logo {
-  min-width: 35px;
-  min-height: 35px;
-}
-
 .botonHamburguesa {
   border: none;
 }
@@ -212,19 +207,8 @@ p {
   height: 35px;
   transition: all 0.5s ease;
 }
-.skills .skillsField .skills-grid .skill-icon .img-blur {
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s ease;
-  opacity: 0;
-}
 .skills .skillsField .skills-grid .skill-icon:hover::after {
   opacity: 1;
-}
-.skills .skillsField .skills-grid .skill-icon:hover .img-blur {
-  opacity: 1;
-  scale: 1.2;
-  filter: blur(15px) contrast(300%);
 }
 .skills .skillsField .skills-grid .skill-icon::after {
   content: "";
@@ -265,7 +249,6 @@ p {
   position: relative;
 }
 .proyects .container .card .webCaptureContainer .webCapture {
-  object-fit: cover;
   height: 250px;
   width: 100%;
 }
@@ -437,8 +420,6 @@ p {
   object-fit: contain;
   position: relative;
   z-index: 4;
-  width: 70%;
-  aspect-ratio: 3/4;
   mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
   border-right: 5px solid #028ac7;
 }
@@ -483,130 +464,10 @@ p {
   text-wrap: balance;
 }
 
-.gallerySection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 100px 10vw 10dvh 10vw;
-  gap: 10px;
-}
-.gallerySection h1 {
-  font-weight: 800;
-  font-size: 2.5rem;
-  color: white;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-.gallerySection .galleryContainer {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  gap: 10px;
-}
-.gallerySection .galleryContainer .imgContainer {
-  flex-grow: 1;
-  height: 300px;
-  min-width: 200px;
-  max-width: 100%;
-}
-.gallerySection .galleryContainer .imgContainer img {
-  max-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  vertical-align: bottom;
-  border-radius: 4px;
-  transition: filter 0.3s ease-in-out;
-}
-.gallerySection .galleryContainer .imgContainer:hover img {
-  filter: drop-shadow(0px 0px 0.5rem #0ea5e9);
-  cursor: pointer;
-}
-.gallerySection .fullscreen-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.gallerySection .fullscreen-overlay.active {
-  opacity: 1;
-}
-.gallerySection .fullscreen-overlay .fullscreen-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.gallerySection .fullscreen-overlay .fullscreen-image.active {
-  opacity: 1;
-  transform: scale(1);
-}
-.gallerySection .fullscreen-overlay .close-button {
-  position: absolute;
-  top: 10svh;
-  right: 30px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.gallerySection .fullscreen-overlay .close-button.active {
-  opacity: 1;
-}
-
 @media screen and (max-width: 1100px) {
   header {
     width: 100vw;
     max-width: 400px;
-  }
-  header .barraNav .container-fluid {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  header .barraNav .container-fluid .offcanvas {
-    background-color: rgba(from #0c506e r g b/0.5) !important;
-    height: 100dvh;
-  }
-  header .barraNav .container-fluid .offcanvas .offcanvas-header {
-    border-bottom: 1px solid rgba(from #7dd5fc r g b/0.4);
-    backdrop-filter: blur(5px);
-  }
-  header .barraNav .container-fluid .offcanvas .offcanvas-header h5 {
-    font-size: 2rem;
-  }
-  header .barraNav .container-fluid .offcanvas .offcanvas-body {
-    backdrop-filter: blur(5px);
-  }
-  header .barraNav .container-fluid .offcanvas .offcanvas-body .navbar-nav li a {
-    font-size: 1.8rem;
-    color: rgba(from #e0f5fe r g b/1);
-  }
-  header .barraNav .container-fluid .offcanvas .offcanvas-body .navbar-nav li a:active {
-    color: white;
-    text-decoration: underline white;
-    text-underline-offset: 10px;
-  }
-  header .barraNav .container-fluid .offcanvas .offcanvas-body .navbar-nav li a:focus {
-    color: white;
-    text-decoration: underline white;
-    text-underline-offset: 10px;
-  }
-  header .barraNav .lang {
-    display: none;
-    height: none;
   }
   .landing {
     height: 100dvh;
@@ -622,14 +483,14 @@ p {
     position: relative;
     z-index: 4;
     height: auto;
-    width: 70vw;
-    max-width: 350px;
+    width: 90vw;
     height: inherit;
+    max-height: 300px;
     object-fit: cover;
     border-radius: 1rem;
     border: none;
     mask-image: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    filter: drop-shadow(0px 0px 20px #028ac7);
+    filter: drop-shadow(5px 5px 10px #028ac7);
   }
   .landing .landingContainer .profileImg::before {
     content: "";
