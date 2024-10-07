@@ -63,6 +63,10 @@ $blue-950: #083549;
 
 //----------GRADIENTS--------//
 
+$-back-gradient:linear-gradient(45deg, rgba(from $blue-90060 r g b / 40%) 0%, rgba(from $blue-70050 r g b / 10%) 100%);
 
+//----------BORDERS--------//
+
+$-card-border: 1px solid rgba(255,255,255,.05);
 
 //----------VARIANTES BOOTSTRAP--------//

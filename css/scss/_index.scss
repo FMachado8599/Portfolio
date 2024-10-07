@@ -8,8 +8,10 @@
     margin-top: 55px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
         & .imgFondo{
             position: absolute;
             opacity: 0.2;
@@ -65,28 +67,24 @@
                 flex-direction: column;
                 text-align: left;
                 z-index: 5;
-                padding: 2rem 2rem 2rem 1rem;
+                padding: 2rem 2rem 2rem 2rem;
                 position: relative;
-                height: 700px;
-                &::before{
-                    content: "";
-                    position: absolute;
-                    backdrop-filter: blur(3px);
-                    mask: linear-gradient(to right, #fff 0%, #fff 50%, transparent 100%);
-                    width: 100%;
-                    height: 100%;
-                    z-index: -2;
-                    left: 0;
-                    transform: translate(1rem 0px);
-                }
-                & h1{
+                height: auto;
+                width: max-content;
+                max-width: 900px;
+                border-radius: 1rem;
+                background: rgba(from #0370a150 r g b / 10%);
+                backdrop-filter: blur(2px);
+                border: $-card-border;
+                & .introName{
                     color: aliceblue;
                     font-size: 3vw;
+                    width: max-content;
                     & span{
                         display: block;
                         text-transform: uppercase;
                         font-weight: 700;
-                        font-size: clamp(34px,4vw,60px);
+                        font-size: clamp(34px,4rem,60px);
                         line-height: 80%;
                         text-wrap: balance;
                     }
@@ -94,10 +92,43 @@
                 & .workArea{
                     color: $blue-600;
                     font-weight: 700;
-                    font-size: clamp(20px,3vw, 50px);
+                    font-size: clamp(20px,2.5rem, 50px);
                     text-wrap: balance;
+                }
+                & div{
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    & .introLink{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        fill: white;
+                        aspect-ratio: 1/1;
+                        width: 2rem;
+                        height: auto;
+                        max-width: 32px;
+
+                        & img{
+                            max-width: 32px;
+                            width: 90%;
+                            fill: white;
+                        }
+                    }
                 }
             }
         }
-
+        & .aboutmeButton{
+            border: 1px solid rgba(255,255,255,.1);
+            color: white;
+            padding: .5rem 1.5rem;
+            border-radius: .3rem;
+            backdrop-filter: blur(3px);
+            background-color: rgba(from $blue-70050 r g b / 10%);
+            transition: background-color .3s ease-out;
+            &:hover{
+                filter: drop-shadow( 5px 5px 7px rgba(from $blue-70050 r g b / 30%));
+                background-color: rgba(from $blue-90060 r g b / 40%);
+            }
+        }
     }

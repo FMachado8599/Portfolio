@@ -65,6 +65,7 @@
                 background-color: $blue-600;
                 color: $blue-50;
                 border-radius: .8rem;
+                @include button1;
             }
         }
     }

@@ -58,6 +58,8 @@
                     padding-bottom: 10px;
                     & .proyectName{
                         color: $white;
+                        font-size: 2rem;
+                        font-weight: 600;
                     }
                     & .proyectTools{
                         display: flex;
@@ -79,14 +81,7 @@
                 & .siteLinkButton{
                     font-size: 14px;
                     text-decoration: none;
-                    color: $white;
-                    padding: .5rem;
-                    background: rgba(3, 112, 161, .2);
-                    border-radius: 5px;
-                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                    backdrop-filter: blur(5px);
-                    -webkit-backdrop-filter: blur(5px);
-                    border: 1px solid rgba(3, 112, 161, .2);
+                    @include button1;
                 }
                 & .githubLink{
                     width: 20px;

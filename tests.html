@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio nesciunt cum velit dolore nostrum in deleniti, doloremque soluta eius consequatur autem dolores minus praesentium natus sequi voluptatum explicabo minima. Quas?</p>
+    <div class="rotating-element">I Rotate!</div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio nesciunt cum velit dolore nostrum in deleniti, doloremque soluta eius consequatur autem dolores minus praesentium natus sequi voluptatum explicabo minima. Quas?</p>
+
+
+<style>
+  body {
+    height: 200vh; /* Makes the page long enough to scroll */
+  }
+  p{
+    height: 500px;
+    font-size: 4rem;
+    background-color: gray;
+  }
+  .rotating-element {
+    background-image: conic-gradient(black 0%, white 100%);
+    color: white;
+    position: sticky;
+    top: 30vh;
+    width: auto;
+    height: 100dvh;
+    aspect-ratio: 1/1;
+    font-size: 3rem;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-out;
+    border-radius: 99%;
+  }
+</style>
+
+<script>
+    const rotatingElement = document.querySelector('.rotating-element');
+
+    window.addEventListener('scroll', () => {
+    // Get the scroll position as a fraction of the total scrollable height
+    const scrollPos = window.scrollY;
+
+    // Rotate the element by the scroll position (adjust multiplier for speed)
+    rotatingElement.style.transform = `rotate(${scrollPos % 360}deg)`;
+    });
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('.rotating-element', {
+    rotate: 360,
+    scrollTrigger: {
+        trigger: '.rotating-element',
+        start: 'top 50%',
+        end: 'bottom 50%',
+        scrub: true // Syncs animation with the scroll
+    }
+    });
+</script>
+
+</body>
+</html>

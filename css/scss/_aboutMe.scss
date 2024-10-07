@@ -25,6 +25,7 @@
         height: 100%;
         width: 100%;
         mask: radial-gradient(circle at 50%, white, transparent 80%);
+        z-index: -10;
     
     }
     & .infoPersonal{
@@ -44,6 +45,18 @@
             height: 100%;
             box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
             object-fit: cover;
+            animation: slide-in-left;
+            animation-timeline: view(70%,5%);
+            @keyframes slide-in-left{
+                from{
+                    opacity: 0;
+                    transform: translateX(-100px);
+                }
+                to{
+                    opacity: 1;
+                    transform:translateX(0px);
+                }
+            }
         }
         & .infoGroup{
             gap: 1rem;
@@ -53,17 +66,20 @@
             max-height: inherit;
             overflow: visible;
             background: none;
+            animation: slide-in-left;
+            animation-timeline: view(70%,5%);
             & .textInfoPersonal{
-                background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70050 100%);
+                background: $-back-gradient;
                 backdrop-filter: blur(3px);
                 padding: 1.5rem;
                 color: $white;
                 gap: 1rem;
                 border-radius: 2rem;
                 box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
+                border: $-card-border;
                 & .iTitle{
                     font-size: 2rem;
-                    filter: drop-shadow(2px 0px 0.15rem black);
+                    filter: drop-shadow(2px 0px 0.15rem rgba(0,0,0,.2));
                 }
                 & div{
                     margin-bottom: 1rem;
@@ -84,9 +100,12 @@
                 gap: 10px;
                 border-radius: 2rem;
                 padding: 1.5rem;
-                background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70030 100%);
+                background: $-back-gradient;
                 backdrop-filter: blur(3px);
                 box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
+                border: $-card-border;
+                animation: slide-in-left;
+                animation-timeline: view(70%,5%);
                 & h3{
                     color:$white;
                     margin-bottom: 1rem;
@@ -120,8 +139,7 @@
                                 background-color: rgba(255, 255, 255, 0.1); /* Luz tenue en hover */
                                 box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3); /* Sombra de color en hover */
                                 filter: brightness(1.5); /* Aumenta la luminosidad del ícono */
-                              }
-                              
+                            }
                               &:hover svg path {
                                 fill: currentColor;
                               }

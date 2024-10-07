@@ -20,6 +20,7 @@
   <body>
     <header>
       <nav
+        id="barraNav"
         class="barraNav navbar navbar-expand-lg navbar-dark bg-sky-900 fixed-top"
       >
         <div class="container-fluid">
@@ -90,19 +91,20 @@
           alt="Codigo de fondo"
         />
         <div class="landingContainer">
-          <img
-          class="profileImg"
-          src="./media/facu.webp"
-          alt="Imagen de fondo Facundo Machado"
-          >
           <div class="textoIntro">
-            <h1 class="heading1" data-section="landing" data-value="heading1">Hi! my name is <span data-section="landing" data-value="name">Facundo Machado</span></h1>
-            <h2 class="workArea" data-section="landing" data-value="workArea">Front-End Developer & Designer</h2>
+            <h1 class="introName" data-section="landing" data-value="heading1"><span data-section="landing" data-value="name">Jsdfaslf Isdfjasdfkl</span></h1>
+            <h2 class="workArea" data-section="landing" data-value="workArea">Front-End Developer & Graphic Designer</h2>
+            <div>
+              <a class="introLink" href=""><img src="./media/github.svg" alt="github profile"></a>
+              <a class="introLink" href=""><img src="./media/linkedin.svg" alt="linkedin profile"></a>
+            </div>
           </div>
         </div>
+        <button class="aboutmeButton" id="aboutMeScrollButton">See more</button>
 
       </section>
       <section
+        id="aboutMe"
         class="aboutMe container d-flex justify-content-center align-items-center flex-column"
       >
         <div class="light"></div>
@@ -126,10 +128,9 @@
                 <p><span>From:</span> Montevideo, Uruguay</p>
               </div>
               <p>
-                Perseverant and dedicated developer & designer, adept at making
-                decisions under pressure. Quick learner, versatile, and
-                empathetic. Creative focus on quality and detail, while
-                maintaining efficiency.
+                Web Developer & Graphic Designer. Quick learner, versatile, and empathetic. 
+                Creative focus on quality and detail, while maintaining efficiency.
+                I enjoy working on Front End development, bringing designs to life with clean and interactive user interfaces.
               </p>
             </div>
             <div id="skills-container" class="skills">
@@ -175,7 +176,7 @@
               <p>Static web with HTML, CSS, SASS, and Bootstrap. Overcame responsive design challenges and learned style optimization.</p>
             </div>
             <div class="proyectLinks">
-              <a class="siteLinkButton" href="https://bunacafeuy.com">Visit site</a>
+              <a target="_blank" class="siteLinkButton" href="https://bunacafeuy.com">Visit site</a>
               <a target="_blank" href="https://github.com/FMachado8599/Buna-Cafe-3.0">
                 <img src="./media/SVG/github-blanco.svg" class="skill githubLink"></img>
               </a>
@@ -207,7 +208,7 @@
             <p>My first implementation of React. Routing and context managing where my favorite parts, while connecting the proyect to Firebase was interesting.</p>
           </div>
           <div class="proyectLinks">
-            <a class="siteLinkButton" href="https://douxboulangerie.netlify.app">Visit site</a>
+            <a target="_blank" class="siteLinkButton" href="https://douxboulangerie.netlify.app">Visit site</a>
             <a target="_blank" href="https://github.com/FMachado8599/E-Commerce-React">
               <img src="./media/SVG/github-blanco.svg" class="skill githubLink"></img>
             </a>

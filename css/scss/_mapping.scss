@@ -1,3 +1,16 @@
 .heading1{
     font-size: 5rem;
 }
+@mixin button1{
+    border: 1px solid rgba(255,255,255,.1);
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: .3rem;
+    backdrop-filter: blur(3px);
+    background-color: rgba(from $blue-70050 r g b / 10%);
+    transition: background-color .3s ease-out;
+    &:hover{
+        filter: drop-shadow( 5px 5px 7px rgba(from $blue-70050 r g b / 30%));
+        background-color: rgba(from $blue-90060 r g b / 40%);
+    }
+}

@@ -2,7 +2,10 @@
     border: none;
 }
 .barraNav{
-    background: radial-gradient(circle at 0%, $blue-90060 0%, $blue-70050 100%);
+    position: fixed;
+    top: 0px;
+    background: radial-gradient(circle at 0%, rgba(from $blue-90060 r g b / 30%) 0%, rgba(from $blue-70050 r g b / 30%) 100%)!important;
     border-bottom: 1px $white-300 solid;
     backdrop-filter: blur(5px);
+    transition: top .3s;
 }
