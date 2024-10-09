@@ -36,26 +36,18 @@
         overflow: visible;
         gap: 1rem;
         position: relative;
-
-        & .imgAboutMe{
-            margin: 0;
-            max-height: inherit;
-            border-radius: 2rem;
-            z-index: 1;
-            height: 100%;
-            box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
-            object-fit: cover;
-            animation: slide-in-left;
-            animation-timeline: view(70%,5%);
-            @keyframes slide-in-left{
-                from{
-                    opacity: 0;
-                    transform: translateX(-100px);
-                }
-                to{
-                    opacity: 1;
-                    transform:translateX(0px);
-                }
+        & .img-container{
+            & .imgAboutMe{
+                margin: 0;
+                max-height: inherit;
+                border-radius: 2rem;
+                z-index: 1;
+                height: 100%;
+                box-shadow: 5px 5px 30px rgba(8, 53, 73, .5);
+                object-fit: cover;
+                opacity: 0;
+                transform: translateX(-300);
+                will-change: opacity, transform;
             }
         }
         & .infoGroup{

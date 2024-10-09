@@ -108,7 +108,7 @@ p {
   gap: 1rem;
   position: relative;
 }
-.aboutMe .infoPersonal .imgAboutMe {
+.aboutMe .infoPersonal .img-container .imgAboutMe {
   margin: 0;
   max-height: inherit;
   border-radius: 2rem;
@@ -116,18 +116,9 @@ p {
   height: 100%;
   box-shadow: 5px 5px 30px rgba(8, 53, 73, 0.5);
   object-fit: cover;
-  animation: slide-in-left;
-  animation-timeline: view(70%, 5%);
-}
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
+  opacity: 0;
+  transform: translateX(-300);
+  will-change: opacity, transform;
 }
 .aboutMe .infoPersonal .infoGroup {
   gap: 1rem;

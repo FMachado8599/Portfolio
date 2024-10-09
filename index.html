@@ -115,11 +115,14 @@
         />
         <h2 class="titulosSeccion" data-section="aboutMe" data-value="sectionTitle">About Me</h2>
         <div class="infoPersonal  px-0">
-          <img
-            class="imgAboutMe md-6 shadow"
-            src="./media/facu.webp"
-            alt="Foto de Facundo"
-          />
+          <div class="img-container">
+            <img
+              id="img-about-me"
+              class="imgAboutMe md-6 shadow"
+              src="./media/facu.webp"
+              alt="Foto de Facundo"
+            />
+          </div>
           <div class="infoGroup">
             <div class="textInfoPersonal md-6">
               <h2 class="iTitle">Who am I?</h2>
@@ -133,14 +136,16 @@
                 I enjoy working on Front End development, bringing designs to life with clean and interactive user interfaces.
               </p>
             </div>
-            <div id="skills-container" class="skills">
-              <div id="developing" class="skillsField">
-                <h2>Developing</h2>
-                <div class="skills-grid"></div>
-              </div>
-              <div id="designing" class="skillsField">
-                <h2>Designing</h2>
-                <div class="skills-grid"></div>
+            <div class="skills-box">
+              <div id="skills-container" class="skills">
+                <div id="developing" class="skillsField">
+                  <h2>Developing</h2>
+                  <div class="skills-grid"></div>
+                </div>
+                <div id="designing" class="skillsField">
+                  <h2>Designing</h2>
+                  <div class="skills-grid"></div>
+                </div>
               </div>
             </div>
           </div>

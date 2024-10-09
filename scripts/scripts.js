@@ -159,3 +159,40 @@ window.addEventListener('scroll', function() {
 
     lastScrollTop = currentScroll;
 });
+
+//-------------------------- OBJECT ANIMATION --------------------------//
+
+// Select the box element
+const box = document.getElementById('img-about-me');
+
+// Set up the Intersection Observer to detect when the box enters the viewport
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add scroll listener when the box is in view
+      window.addEventListener('scroll', handleScroll);
+    } else {
+      // Remove scroll listener when the box is out of view
+      window.removeEventListener('scroll', handleScroll);
+    }
+  });
+}, {
+  threshold: 0 // Detect when any part of the element is visible
+});
+
+// Start observing the box
+observer.observe(box);
+
+// Handle scroll to calculate opacity and translation based on scroll position
+function handleScroll() {
+  const boxRect = box.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  
+  // Calculate the progress as a value between 0 and 1
+  const scrollProgress = Math.min(Math.max((windowHeight - boxRect.top) / windowHeight, 0), 1);
+
+  // Set the opacity and translation based on scroll position
+  box.style.opacity = scrollProgress;
+  box.style.transform = `translateX(${(scrollProgress - 1) * 100}px)`;
+}
+
