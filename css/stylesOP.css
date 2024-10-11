@@ -275,19 +275,18 @@ p {
 .proyects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  overflow: visible;
   margin-bottom: 5vw;
+  overflow-x: hidden;
 }
-.proyects .container {
+.proyects #card-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 5vw;
 }
-.proyects .container .card {
+.proyects #card-container .card {
   max-width: 400px;
   border-radius: 1rem;
   overflow: hidden;
@@ -295,15 +294,15 @@ p {
   background-color: rgba(8, 53, 73, 0.4);
   filter: drop-shadow(5px 5px 20px rgba(8, 53, 73, 0.5));
 }
-.proyects .container .card .webCaptureContainer {
+.proyects #card-container .card .webCaptureContainer {
   position: relative;
 }
-.proyects .container .card .webCaptureContainer .webCapture {
+.proyects #card-container .card .webCaptureContainer .webCapture {
   object-fit: cover;
   height: 250px;
   width: 100%;
 }
-.proyects .container .card .avatar {
+.proyects #card-container .card .avatar {
   position: absolute;
   margin-left: 1rem;
   width: 100px;
@@ -311,7 +310,7 @@ p {
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
   top: 200px;
 }
-.proyects .container .card .avatarSvg {
+.proyects #card-container .card .avatarSvg {
   position: absolute;
   margin-left: 1rem;
   width: 100px;
@@ -322,11 +321,11 @@ p {
   background-color: white;
   padding: 10px;
 }
-.proyects .container .card .cardText {
+.proyects #card-container .card .cardText {
   padding: 1rem;
   padding-top: 70px;
 }
-.proyects .container .card .cardText .proyectTitle {
+.proyects #card-container .card .cardText .proyectTitle {
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -334,28 +333,28 @@ p {
   gap: 20px;
   padding-bottom: 10px;
 }
-.proyects .container .card .cardText .proyectTitle .proyectName {
+.proyects #card-container .card .cardText .proyectTitle .proyectName {
   color: #F5F5F5;
   font-size: 2rem;
   font-weight: 600;
 }
-.proyects .container .card .cardText .proyectTitle .proyectTools {
+.proyects #card-container .card .cardText .proyectTitle .proyectTools {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.proyects .container .card .cardText .proyectTitle .proyectTools img {
+.proyects #card-container .card .cardText .proyectTitle .proyectTools img {
   height: 18px;
   opacity: 40%;
 }
-.proyects .container .card .proyectLinks {
+.proyects #card-container .card .proyectLinks {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
   padding: 1rem;
 }
-.proyects .container .card .proyectLinks .siteLinkButton {
+.proyects #card-container .card .proyectLinks .siteLinkButton {
   font-size: 14px;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -366,11 +365,11 @@ p {
   background-color: rgba(from rgba(3, 112, 161, 0.3137254902) r g b/10%);
   transition: background-color 0.3s ease-out;
 }
-.proyects .container .card .proyectLinks .siteLinkButton:hover {
+.proyects #card-container .card .proyectLinks .siteLinkButton:hover {
   filter: drop-shadow(5px 5px 7px rgba(from rgba(3, 112, 161, 0.3137254902) r g b/30%));
   background-color: rgba(from rgba(12, 80, 110, 0.3764705882) r g b/40%);
 }
-.proyects .container .card .proyectLinks .githubLink {
+.proyects #card-container .card .proyectLinks .githubLink {
   width: 20px;
 }
 

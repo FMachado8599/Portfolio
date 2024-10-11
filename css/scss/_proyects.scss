@@ -1,15 +1,19 @@
 .proyects{
+    // min-height: 300vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    overflow: visible;
     margin-bottom: 5vw;
-    & .container{
+    overflow-x: hidden;
+    & #card-container{
+        // position: fixed;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         display: flex;
-        flex-direction: row;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         gap: 5vw;
         & .card{
             max-width: 400px;
@@ -18,7 +22,9 @@
             position: relative;
             background-color: rgba(8, 53, 73, .4);
             filter: drop-shadow(5px 5px 20px rgba(8, 53, 73, .5));
-            
+            // opacity: 0;
+            // transform: translateY(200px);
+            // transition: opacity 0.5s, transform 0.5s;
             & .webCaptureContainer{
                 position: relative;
                 & .webCapture{
@@ -88,9 +94,10 @@
                 }
             }
         }
+        // & .card.active{
+        //     opacity: 1;
+        //     transform: translateY(0);
+        // }
     }
     
 }
-// *{
-//     border: 1px solid blue;
-// }
