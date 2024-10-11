@@ -58,8 +58,9 @@
             max-height: inherit;
             overflow: visible;
             background: none;
-            animation: slide-in-left;
-            animation-timeline: view(70%,5%);
+            opacity: 0;
+            transform: translateX(300);
+            will-change: opacity, transform;
             & .textInfoPersonal{
                 background: $-back-gradient;
                 backdrop-filter: blur(3px);

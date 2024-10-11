@@ -128,8 +128,9 @@ p {
   max-height: inherit;
   overflow: visible;
   background: none;
-  animation: slide-in-left;
-  animation-timeline: view(70%, 5%);
+  opacity: 0;
+  transform: translateX(300);
+  will-change: opacity, transform;
 }
 .aboutMe .infoPersonal .infoGroup .textInfoPersonal {
   background: linear-gradient(45deg, rgba(from rgba(12, 80, 110, 0.3764705882) r g b/40%) 0%, rgba(from rgba(3, 112, 161, 0.3137254902) r g b/10%) 100%);
