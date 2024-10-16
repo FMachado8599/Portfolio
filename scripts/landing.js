@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const scrollButton = document.getElementById('aboutMeScrollButton');
-    const section2 = document.getElementById('aboutMe');
+    const scrollButton = document.getElementById('proyectsScrollButton');
+    const section2 = document.getElementById('proyects');
 
     scrollButton.addEventListener('click', function() {
         section2.scrollIntoView({ behavior: 'smooth' });
@@ -50,6 +50,7 @@ textoIntro.addEventListener('mouseleave', function() {
     // Reset the background to the original color
     textoIntro.style.background = originalBG;
 });
+
 
 
 

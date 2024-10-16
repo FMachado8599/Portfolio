@@ -9,13 +9,17 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./css/stylesOP.css" />
     <title>Facundo Machado</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script defer src="./scripts/contact.js"></script>
   </head>
   <body>
     <header>
@@ -89,7 +93,7 @@
       </nav>
     </header>
     <main>
-      <section class="landing">
+      <section class="hero">
         <img
           class="imgFondo"
           src="./media/1x/Codigo_1080px.svg"
@@ -112,10 +116,15 @@
               <a class="introLink" href=""
                 ><img src="./media/linkedin.svg" alt="linkedin profile"
               /></a>
+              <buttton onclick="$download()" class="cvDownload"
+                >Download CV</buttton
+              >
             </div>
           </div>
         </div>
-        <button class="aboutmeButton" id="aboutMeScrollButton">See more</button>
+        <button class="proyectsButton" id="proyectsScrollButton">
+          Proyects
+        </button>
       </section>
       <section
         id="aboutMe"
@@ -173,7 +182,7 @@
           </div>
         </div>
       </section>
-      <section class="proyects">
+      <section class="proyects" id="proyects">
         <h2 class="titulosSeccion">Proyects</h2>
         <div id="card-container" class="container"></div>
       </section>
@@ -237,17 +246,19 @@
           </div>
           <form class="contactForm">
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
+              <label type="text" for="name" class="form-label">Name</label>
               <input
                 type="name"
+                name="fullName"
                 class="form-control rounded text-input"
-                id="email"
+                id="name"
                 placeholder="Personal or company name"
               />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
               <input
+                name="email"
                 type="email"
                 class="form-control rounded text-input"
                 id="email"
@@ -255,8 +266,11 @@
               />
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label">Send me a message</label>
+              <label type="text" for="message" class="form-label"
+                >Send me a message</label
+              >
               <textarea
+                name="message"
                 class="form-control rounded text-input"
                 id="message"
                 rows="3"

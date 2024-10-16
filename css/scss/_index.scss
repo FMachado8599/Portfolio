@@ -3,7 +3,7 @@
 @import '_slider';
 @import '_contact';
 
-.landing{
+.hero{
     height: 100svh;
     margin-top: 55px;
     width: 100%;
@@ -36,34 +36,10 @@
             max-height: 700px;
             z-index: 1;
             overflow: hidden;
-            // &::after{
-            //     content: "";
-            //     position: absolute;
-            //     display: block;
-            //     width: 5px;
-            //     height: 100%;
-            //     background-color: $blue-600;
-            //     opacity: 1;
-            //     z-index: 10;
-            // }
-            & .profileImg{
-                object-fit: contain;
-                position: relative;
-                z-index: 4;
-                width: 70%;
-                aspect-ratio: 3/4;
-                mask-image: linear-gradient(
-                to left,
-                rgba(0, 0, 0, 1) 0%,
-                rgba(0, 0, 0, 1) 60%,
-                rgba(0, 0, 0, 0) 100%);
-                border-right: 5px solid $blue-600;
-
-            }
             & .textoIntro{
                 display: flex;
                 justify-content: center;
-                align-items: start;
+                align-items: center;
                 flex-direction: column;
                 text-align: left;
                 z-index: 5;
@@ -79,23 +55,24 @@
                 & .introName{
                     color: aliceblue;
                     font-size: 3vw;
-                    width: max-content;
-                    & span{
-                        display: block;
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        font-size: clamp(34px,4rem,60px);
-                        line-height: 80%;
-                        text-wrap: balance;
-                    }
+                    width: 100%;
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: clamp(34px,3rem,60px);
+                    line-height: 80%;
+                    text-align: center;
+                    text-wrap: balance;
                 }
                 & .workArea{
+                    text-align: center;
                     color: $blue-600;
                     font-weight: 700;
-                    font-size: clamp(20px,2.5rem, 50px);
+                    font-size: clamp(10px,2rem, 50px);
                     text-wrap: balance;
                 }
                 & div{
+                    margin-top: 20px;
                     gap: 10px;
                     display: flex;
                     flex-direction: row;
@@ -115,10 +92,16 @@
                             fill: white;
                         }
                     }
+                    & .cvDownload{
+                        @include button1;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
-        & .aboutmeButton{
+        & .proyectsButton{
             border: 1px solid rgba(255,255,255,.1);
             color: white;
             padding: .5rem 1.5rem;
