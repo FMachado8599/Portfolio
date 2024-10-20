@@ -19,7 +19,13 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <script defer src="./scripts/contact.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "ymn2KgYlY75XPZaJd",
+        });
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -116,9 +122,7 @@
               <a class="introLink" href=""
                 ><img src="./media/linkedin.svg" alt="linkedin profile"
               /></a>
-              <buttton onclick="$download()" class="cvDownload"
-                >Download CV</buttton
-              >
+              <buttton id="downloadBtn" class="cvDownload">Download CV</buttton>
             </div>
           </div>
         </div>
@@ -244,7 +248,7 @@
               <p class="cellphone">+59895018712</p>
             </div>
           </div>
-          <form class="contactForm">
+          <form id="contactForm" class="contactForm">
             <div class="mb-3">
               <label type="text" for="name" class="form-label">Name</label>
               <input
@@ -292,8 +296,10 @@ Hi! We would love to get in touch with you and find out about your services. Tha
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/downloadCV.js"></script>
     <script src="./scripts/landing.js"></script>
     <script src="./scripts/aboutMe.js"></script>
     <script src="./scripts/projects.js"></script>
+    <script defer src="./scripts/contact.js"></script>
   </body>
 </html>

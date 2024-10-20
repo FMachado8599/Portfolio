@@ -51,6 +51,8 @@ textoIntro.addEventListener('mouseleave', function() {
     textoIntro.style.background = originalBG;
 });
 
+// ------------------------------ DESCARGAR CV ------------------------------//
+
 
 
 

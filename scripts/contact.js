@@ -1,10 +1,10 @@
-const form = document.querySelector('form');
-const nameInput = document.querySelector('name');
-const emailInput = document.querySelector('email');
-const messageInput = document.querySelector('message');
+const form = document.getElementById('contactForm');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#message');
 
 const serviceID = 'service_i4oskfr';
-const templeteID = 'template_29hjmr2';
+const templateID = 'template_29hjmr2';
 const publicKey = 'ymn2KgYlY75XPZaJd';
 
 emailjs.init(publicKey);
@@ -16,7 +16,7 @@ form.addEventListener('submit', (e)=>{
         user_email: emailInput.value,
         message: messageInput.value
     };
-    emialjs.sendForm(serviceId, templateID, inputData).then(
+    emailjs.send(serviceID, templateID, inputData).then(
         ()=>{
             nameInput.value = '';
             emailInput.value = '';
