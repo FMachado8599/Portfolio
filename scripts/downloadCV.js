@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadBtn.textContent = 'Downloading...';
 
         // Replace 'ruta/al/archivo.pdf' with the actual path to your PDF file
-        const pdfPath = './media/CV_Facundo_Machado.pdf';
+        const pdfPath = './media/cv_facundo_machado_es_8-25_dev_.pdf';
 
         const link = document.createElement('a');
         link.href = pdfPath;
